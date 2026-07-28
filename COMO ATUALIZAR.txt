@@ -1,0 +1,64 @@
+Passo a passo completo, cobrindo as duas fontes:
+
+## As duas fontes de dados
+
+| O quê | Norma vigente | O que ela cobre |
+|---|---|---|
+| Substâncias controladas (A1, A2, A3, B1, B2, C1, C2, C3, C5) | **Portaria SVS/MS 344/98**, Anexo I | Entorpecentes, psicotrópicos, retinoides, imunossupressores, anabolizantes |
+| Antimicrobianos | **Instrução Normativa nº 360/2025** | Antibióticos e afins sujeitos a receita com retenção de 2ª via |
+
+A Portaria 344/98 é a norma "mãe" de controlados desde 1998, só atualizada por RDCs periódicas. Já os antimicrobianos mudaram de casa: eram um anexo dentro da RDC 20/2011, essa RDC foi revogada pela RDC 471/2021, e a lista de substâncias passou a viver numa Instrução Normativa separada (hoje a 360/2025, que substituiu a antiga IN 244/2023).
+
+## Os 6 arquivos que você precisa ter na mesma pasta
+
+```
+atualiza_controlados.py       → busca a Portaria 344/98
+atualiza_antimicrobianos.py   → busca a IN 360/2025
+estrutura_controlados.py      → junta as duas fontes num só JSON
+template_consulta.html        → molde visual da página
+gerar_pagina.py                → gera o index.html final
+README.md                      → esse guia, pra consulta futura
+```
+
+## O ciclo completo, sempre que quiser atualizar
+
+Roda os 4 comandos nessa ordem, na mesma pasta:
+
+```
+python3 atualiza_controlados.py
+python3 atualiza_antimicrobianos.py
+python3 estrutura_controlados.py
+python3 gerar_pagina.py
+```
+
+**O que cada um faz:**
+
+1. `atualiza_controlados.py` → baixa o texto da Portaria 344/98 e salva `controlados_ultimo.json` (bruto, com as 9 listas de controle especial)
+2. `atualiza_antimicrobianos.py` → baixa o texto da IN 360/2025 e salva `antimicrobianos.json` (já pronto, com as 131 substâncias)
+3. `estrutura_controlados.py` → lê os dois arquivos acima, separa a Portaria item por item, e junta tudo num `controlados.json` único (10 categorias: A1 até C5 + Antimicrobiano)
+4. `gerar_pagina.py` → injeta esse `controlados.json` dentro do `template_consulta.html` e gera o `index.html` final, que é o que você sobe pro site
+
+## Quando rodar isso
+
+Cada script tem sua própria cadência de mudança, porque são normas diferentes:
+
+- **`atualiza_controlados.py`** (Portaria 344/98) — já tem aviso automático embutido: quando detecta mudança desde a última captura, imprime **"⚠️ MUDANÇA DETECTADA"**. Sugestão: rodar 1x por mês.
+- **`atualiza_antimicrobianos.py`** (IN 360/2025) — ainda não tem esse aviso de diff (é mais simples, então roda rápido). Sugestão: rodar junto com o anterior, no mesmo dia do mês.
+
+Se nenhum dos dois avisar mudança, não precisa rodar os passos 3 e 4 — só regenera a página quando algo realmente mudou.
+
+## Antes de publicar uma atualização
+
+Mesma regra de sempre, mas agora vale para as duas fontes:
+
+1. Abre o `controlados.json` recém-gerado
+2. Compara com a versão anterior — o que mudou? Uma substância nova? Uma removida?
+3. Confirma contra o texto oficial antes de sobrescrever o site:
+   - Portaria 344/98: `gov.br/anvisa/pt-br/assuntos/medicamentos/controlados/lista-substancias`
+   - IN 360/2025 (ou a que vier substituí-la): busque no Datalegis por "Instrução Normativa antimicrobianos ANVISA" — **se aparecer uma IN mais nova revogando a 360/2025**, você precisa trocar manualmente a URL dentro do `atualiza_antimicrobianos.py` (tem um comentário no topo do arquivo indicando exatamente onde mexer)
+
+## Ponto de atenção específico dos antimicrobianos
+
+A IN 360/2025 também define uma segunda lista, de agonistas GLP-1 (semaglutida, tirzepatida — as "canetas emagrecedoras"), com regra de receita diferente (90 dias, não 10). O script já ignora essa parte de propósito, porque não é antimicrobiano. Se um dia você quiser incluir essa categoria também no site, é um terceiro "módulo" separado, não um ajuste dentro do antibiótico.
+
+Quer que eu já atualize o `README.md` incorporando exatamente essa explicação, pra ficar tudo documentado num arquivo só?

@@ -101,11 +101,37 @@ def main():
         "listas": resultado,
     }
 
+    # Mescla os antimicrobianos (IN 360/2025), gerados separadamente pelo
+    # atualiza_antimicrobianos.py, se o arquivo existir nesta pasta.
+    caminho_antimicrobianos = Path("antimicrobianos.json")
+    if caminho_antimicrobianos.exists():
+        antimicrobianos = json.loads(caminho_antimicrobianos.read_text(encoding="utf-8"))
+        lista_antimicrobiano = antimicrobianos.get("listas", {}).get("ANTIMICROBIANO")
+        if lista_antimicrobiano:
+            saida["listas"]["ANTIMICROBIANO"] = lista_antimicrobiano
+            print(f"ANTIMICROBIANO: {len(lista_antimicrobiano['substancias'])} substância(s) — mesclado de antimicrobianos.json")
+        else:
+            print("Aviso: antimicrobianos.json encontrado, mas sem a chave 'ANTIMICROBIANO' esperada.")
+    else:
+        print("Aviso: antimicrobianos.json não encontrado nesta pasta -- rode o atualiza_antimicrobianos.py antes, se quiser incluir antibióticos.")
+
+    # Mescla classe terapêutica / indicações / mecanismo de ação, quando
+    # existir curadoria para a substância (ver gerar_detalhes.py).
+    caminho_detalhes = Path("detalhes_farmacologicos.json")
+    if caminho_detalhes.exists():
+        detalhes = json.loads(caminho_detalhes.read_text(encoding="utf-8"))
+        saida["detalhes"] = detalhes
+        print(f"Detalhes farmacológicos: {len(detalhes)} substância(s) com classe/indicação/mecanismo curados")
+    else:
+        saida["detalhes"] = {}
+        print("Aviso: detalhes_farmacologicos.json não encontrado -- página ficará sem classe/indicação/mecanismo.")
+
     Path("controlados.json").write_text(
         json.dumps(saida, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
-    print(f"\nSalvo: controlados.json ({len(resultado)}/{len(LISTAS_RELEVANTES)} listas estruturadas)")
+    print(f"\nSalvo: controlados.json ({len(resultado)}/{len(LISTAS_RELEVANTES)} listas da Portaria 344/98"
+          f"{' + antimicrobianos' if 'ANTIMICROBIANO' in saida['listas'] else ''})")
     if avisos:
         print("\nAvisos:")
         for a in avisos:
