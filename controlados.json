@@ -730,5 +730,1077 @@
       ],
       "adendo": "Lista não se aplica a antimicrobianos de uso exclusivo hospitalar. Receita válida por 10 dias a contar da emissão; dispensação mediante retenção da 2ª via, devolvendo a 1ª via ao paciente."
     }
+  },
+  "detalhes": {
+    "ampicilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "amoxicilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "cloxacilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "dicloxacilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "oxacilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "penicilina g": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "penicilina v": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "carbenicilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "piperacilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "metampicilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "ticarcilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "sultamicilina": {
+      "classe": "Antibiótico betalactâmico (penicilina)",
+      "indicacoes": "Infecções bacterianas por germes sensíveis (respiratórias, urinárias, de pele e partes moles, entre outras).",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs (proteínas ligadoras de penicilina), bloqueando a transpeptidação do peptidoglicano."
+    },
+    "ácido clavulânico": {
+      "classe": "Inibidor de betalactamase",
+      "indicacoes": "Associado a penicilinas (ex.: amoxicilina, ampicilina, piperacilina) para ampliar o espectro contra bactérias produtoras de betalactamase.",
+      "mecanismo": "Inibe as betalactamases bacterianas, protegendo o antibiótico associado da inativação enzimática; sem atividade antimicrobiana relevante isolada."
+    },
+    "sulbactam": {
+      "classe": "Inibidor de betalactamase",
+      "indicacoes": "Associado a penicilinas (ex.: amoxicilina, ampicilina, piperacilina) para ampliar o espectro contra bactérias produtoras de betalactamase.",
+      "mecanismo": "Inibe as betalactamases bacterianas, protegendo o antibiótico associado da inativação enzimática; sem atividade antimicrobiana relevante isolada."
+    },
+    "tazobactam": {
+      "classe": "Inibidor de betalactamase",
+      "indicacoes": "Associado a penicilinas (ex.: amoxicilina, ampicilina, piperacilina) para ampliar o espectro contra bactérias produtoras de betalactamase.",
+      "mecanismo": "Inibe as betalactamases bacterianas, protegendo o antibiótico associado da inativação enzimática; sem atividade antimicrobiana relevante isolada."
+    },
+    "axetilcefuroxima": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefaclor": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefadroxil": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefalexina": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefalotina": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefazolina": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefepima": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefodizima": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefoperazona": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefotaxima": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefoxitina": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefpodoxima": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefefpiroma": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefprozil": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "ceftadizima": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "ceftarolina fosamila": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "ceftobiprol": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "ceftriaxona": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "cefuroxima": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "loracarbef": {
+      "classe": "Antibiótico betalactâmico (cefalosporina)",
+      "indicacoes": "Infecções respiratórias, urinárias, de pele e partes moles, e infecções mais graves conforme a geração do fármaco.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs, de forma semelhante às penicilinas."
+    },
+    "doripenem": {
+      "classe": "Antibiótico betalactâmico (carbapenêmico)",
+      "indicacoes": "Infecções bacterianas graves ou por germes multirresistentes, geralmente em ambiente hospitalar.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs; amplo espectro e alta estabilidade frente a betalactamases."
+    },
+    "ertapenem": {
+      "classe": "Antibiótico betalactâmico (carbapenêmico)",
+      "indicacoes": "Infecções bacterianas graves ou por germes multirresistentes, geralmente em ambiente hospitalar.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs; amplo espectro e alta estabilidade frente a betalactamases."
+    },
+    "imipenem": {
+      "classe": "Antibiótico betalactâmico (carbapenêmico)",
+      "indicacoes": "Infecções bacterianas graves ou por germes multirresistentes, geralmente em ambiente hospitalar.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs; amplo espectro e alta estabilidade frente a betalactamases."
+    },
+    "meropenem": {
+      "classe": "Antibiótico betalactâmico (carbapenêmico)",
+      "indicacoes": "Infecções bacterianas graves ou por germes multirresistentes, geralmente em ambiente hospitalar.",
+      "mecanismo": "Inibe a síntese da parede celular bacteriana ligando-se às PBPs; amplo espectro e alta estabilidade frente a betalactamases."
+    },
+    "aztreonam": {
+      "classe": "Antibiótico betalactâmico (monobactâmico)",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, especialmente em pacientes alérgicos a outros betalactâmicos.",
+      "mecanismo": "Inibe seletivamente a síntese da parede celular de bactérias Gram-negativas, ligando-se às suas PBPs."
+    },
+    "teicoplanina": {
+      "classe": "Antibiótico glicopeptídeo",
+      "indicacoes": "Infecções por bactérias Gram-positivas, incluindo cepas resistentes à meticilina (MRSA).",
+      "mecanismo": "Liga-se ao terminal D-Ala-D-Ala do precursor do peptideoglicano, impedindo sua polimerização e a síntese da parede celular."
+    },
+    "vancomicina": {
+      "classe": "Antibiótico glicopeptídeo",
+      "indicacoes": "Infecções por bactérias Gram-positivas, incluindo cepas resistentes à meticilina (MRSA).",
+      "mecanismo": "Liga-se ao terminal D-Ala-D-Ala do precursor do peptideoglicano, impedindo sua polimerização e a síntese da parede celular."
+    },
+    "amicacina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "estreptomicina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "diidroestreptomicina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "gentamicina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "neomicina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "netilmicina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "tobramicina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "espectinomicina": {
+      "classe": "Antibiótico aminoglicosídeo",
+      "indicacoes": "Infecções por bactérias Gram-negativas aeróbias, frequentemente em associação com outros antibióticos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, causando leitura incorreta do RNAm e inibindo a síntese proteica bacteriana."
+    },
+    "azitromicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "claritromicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "eritromicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "diritromicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "espiramicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "miocamicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "roxitromicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "telitromicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "pristinamicina": {
+      "classe": "Antibiótico macrolídeo",
+      "indicacoes": "Infecções respiratórias, de pele e partes moles, e como alternativa em pacientes alérgicos a betalactâmicos.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, bloqueando a translocação e inibindo a síntese proteica bacteriana."
+    },
+    "clindamicina": {
+      "classe": "Antibiótico lincosamida",
+      "indicacoes": "Infecções por anaeróbios e cocos Gram-positivos, incluindo infecções odontogênicas e de pele.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, inibindo a síntese proteica bacteriana de forma semelhante aos macrolídeos."
+    },
+    "lincomicina": {
+      "classe": "Antibiótico lincosamida",
+      "indicacoes": "Infecções por anaeróbios e cocos Gram-positivos, incluindo infecções odontogênicas e de pele.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, inibindo a síntese proteica bacteriana de forma semelhante aos macrolídeos."
+    },
+    "doxiciclina": {
+      "classe": "Antibiótico tetraciclina",
+      "indicacoes": "Infecções respiratórias, cutâneas (incluindo acne), por Rickettsia, Chlamydia e outras.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, impedindo a ligação do RNA transportador e a síntese proteica bacteriana."
+    },
+    "limeciclina": {
+      "classe": "Antibiótico tetraciclina",
+      "indicacoes": "Infecções respiratórias, cutâneas (incluindo acne), por Rickettsia, Chlamydia e outras.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, impedindo a ligação do RNA transportador e a síntese proteica bacteriana."
+    },
+    "minociclina": {
+      "classe": "Antibiótico tetraciclina",
+      "indicacoes": "Infecções respiratórias, cutâneas (incluindo acne), por Rickettsia, Chlamydia e outras.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, impedindo a ligação do RNA transportador e a síntese proteica bacteriana."
+    },
+    "oxitetraciclina": {
+      "classe": "Antibiótico tetraciclina",
+      "indicacoes": "Infecções respiratórias, cutâneas (incluindo acne), por Rickettsia, Chlamydia e outras.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, impedindo a ligação do RNA transportador e a síntese proteica bacteriana."
+    },
+    "tetraciclina": {
+      "classe": "Antibiótico tetraciclina",
+      "indicacoes": "Infecções respiratórias, cutâneas (incluindo acne), por Rickettsia, Chlamydia e outras.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, impedindo a ligação do RNA transportador e a síntese proteica bacteriana."
+    },
+    "tigeciclina": {
+      "classe": "Antibiótico tetraciclina",
+      "indicacoes": "Infecções respiratórias, cutâneas (incluindo acne), por Rickettsia, Chlamydia e outras.",
+      "mecanismo": "Liga-se à subunidade ribossomal 30S, impedindo a ligação do RNA transportador e a síntese proteica bacteriana."
+    },
+    "besifloxacino": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "ciprofloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "gatifloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "gemifloxacino": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "levofloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "lomefloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "moxifloxacino": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "norfloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "ofloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "pefloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "trovafloxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "rosoxacina": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "ácido nalidíxico": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "ácido oxolínico": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "ácido pipemídico": {
+      "classe": "Antibiótico quinolona/fluoroquinolona",
+      "indicacoes": "Infecções urinárias, respiratórias, gastrointestinais e de outros sítios, conforme geração e espectro.",
+      "mecanismo": "Inibe as enzimas DNA girase e topoisomerase IV bacterianas, impedindo o superenovelamento e a replicação do DNA."
+    },
+    "sulfacetamida": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfadiazina": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfadoxina": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfaguanidina": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfamerazina": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfanilamida": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfametizol": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfametoxazol": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfametoxipiridazina": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfametoxipirimidina": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "sulfatiazol": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "ftalilsulfatiazol": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "brodimoprima": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "trimetoprima": {
+      "classe": "Antibiótico sulfonamida / diaminopirimidina",
+      "indicacoes": "Infecções urinárias, respiratórias e outras, conforme associação e espectro do fármaco.",
+      "mecanismo": "Inibe a síntese de ácido fólico bacteriano: sulfonamidas bloqueiam a di-hidropteroato sintetase; trimetoprima e brodimoprima bloqueiam a di-hidrofolato redutase, com efeito frequentemente sinérgico quando associados."
+    },
+    "metronidazol": {
+      "classe": "Antimicrobiano nitroimidazólico / nitrofurano",
+      "indicacoes": "Infecções por anaeróbios e protozoários (metronidazol); infecções urinárias baixas (nitrofurantoína).",
+      "mecanismo": "Após redução intracelular, danifica o DNA do microrganismo, levando à sua morte."
+    },
+    "nitrofurantoína": {
+      "classe": "Antimicrobiano nitroimidazólico / nitrofurano",
+      "indicacoes": "Infecções por anaeróbios e protozoários (metronidazol); infecções urinárias baixas (nitrofurantoína).",
+      "mecanismo": "Após redução intracelular, danifica o DNA do microrganismo, levando à sua morte."
+    },
+    "rifabutina": {
+      "classe": "Antibiótico rifamicínico",
+      "indicacoes": "Tuberculose e outras micobacterioses; rifampicina também usada em profilaxia de meningite meningocócica.",
+      "mecanismo": "Inibe a RNA polimerase DNA-dependente bacteriana, bloqueando a transcrição."
+    },
+    "rifamicina": {
+      "classe": "Antibiótico rifamicínico",
+      "indicacoes": "Tuberculose e outras micobacterioses; rifampicina também usada em profilaxia de meningite meningocócica.",
+      "mecanismo": "Inibe a RNA polimerase DNA-dependente bacteriana, bloqueando a transcrição."
+    },
+    "rifampicina": {
+      "classe": "Antibiótico rifamicínico",
+      "indicacoes": "Tuberculose e outras micobacterioses; rifampicina também usada em profilaxia de meningite meningocócica.",
+      "mecanismo": "Inibe a RNA polimerase DNA-dependente bacteriana, bloqueando a transcrição."
+    },
+    "rifapentina": {
+      "classe": "Antibiótico rifamicínico",
+      "indicacoes": "Tuberculose e outras micobacterioses; rifampicina também usada em profilaxia de meningite meningocócica.",
+      "mecanismo": "Inibe a RNA polimerase DNA-dependente bacteriana, bloqueando a transcrição."
+    },
+    "isoniazida": {
+      "classe": "Antimicobacteriano (tuberculostático)",
+      "indicacoes": "Tratamento da tuberculose, geralmente em esquemas combinados.",
+      "mecanismo": "Mecanismos variados conforme o fármaco: interferência na síntese do ácido micólico da parede micobacteriana, na síntese proteica ou em outras vias metabólicas essenciais ao bacilo."
+    },
+    "etambutol": {
+      "classe": "Antimicobacteriano (tuberculostático)",
+      "indicacoes": "Tratamento da tuberculose, geralmente em esquemas combinados.",
+      "mecanismo": "Mecanismos variados conforme o fármaco: interferência na síntese do ácido micólico da parede micobacteriana, na síntese proteica ou em outras vias metabólicas essenciais ao bacilo."
+    },
+    "etionamida": {
+      "classe": "Antimicobacteriano (tuberculostático)",
+      "indicacoes": "Tratamento da tuberculose, geralmente em esquemas combinados.",
+      "mecanismo": "Mecanismos variados conforme o fármaco: interferência na síntese do ácido micólico da parede micobacteriana, na síntese proteica ou em outras vias metabólicas essenciais ao bacilo."
+    },
+    "pirazinamida": {
+      "classe": "Antimicobacteriano (tuberculostático)",
+      "indicacoes": "Tratamento da tuberculose, geralmente em esquemas combinados.",
+      "mecanismo": "Mecanismos variados conforme o fármaco: interferência na síntese do ácido micólico da parede micobacteriana, na síntese proteica ou em outras vias metabólicas essenciais ao bacilo."
+    },
+    "protionamida": {
+      "classe": "Antimicobacteriano (tuberculostático)",
+      "indicacoes": "Tratamento da tuberculose, geralmente em esquemas combinados.",
+      "mecanismo": "Mecanismos variados conforme o fármaco: interferência na síntese do ácido micólico da parede micobacteriana, na síntese proteica ou em outras vias metabólicas essenciais ao bacilo."
+    },
+    "capreomicin": {
+      "classe": "Antimicobacteriano (tuberculostático)",
+      "indicacoes": "Tratamento da tuberculose, geralmente em esquemas combinados.",
+      "mecanismo": "Mecanismos variados conforme o fármaco: interferência na síntese do ácido micólico da parede micobacteriana, na síntese proteica ou em outras vias metabólicas essenciais ao bacilo."
+    },
+    "delamanide": {
+      "classe": "Antimicobacteriano (tuberculostático)",
+      "indicacoes": "Tratamento da tuberculose, geralmente em esquemas combinados.",
+      "mecanismo": "Mecanismos variados conforme o fármaco: interferência na síntese do ácido micólico da parede micobacteriana, na síntese proteica ou em outras vias metabólicas essenciais ao bacilo."
+    },
+    "clofazimina": {
+      "classe": "Antimicobacteriano (antileprótico)",
+      "indicacoes": "Tratamento da hanseníase, geralmente em esquema poliquimioterápico.",
+      "mecanismo": "Dapsona (difenilsulfona) inibe a síntese de ácido fólico bacteriano; clofazimina liga-se ao DNA micobacteriano e apresenta ação anti-inflamatória associada."
+    },
+    "dapsona": {
+      "classe": "Antimicobacteriano (antileprótico)",
+      "indicacoes": "Tratamento da hanseníase, geralmente em esquema poliquimioterápico.",
+      "mecanismo": "Dapsona (difenilsulfona) inibe a síntese de ácido fólico bacteriano; clofazimina liga-se ao DNA micobacteriano e apresenta ação anti-inflamatória associada."
+    },
+    "difenilsulfona": {
+      "classe": "Antimicobacteriano (antileprótico)",
+      "indicacoes": "Tratamento da hanseníase, geralmente em esquema poliquimioterápico.",
+      "mecanismo": "Dapsona (difenilsulfona) inibe a síntese de ácido fólico bacteriano; clofazimina liga-se ao DNA micobacteriano e apresenta ação anti-inflamatória associada."
+    },
+    "daptomicina": {
+      "classe": "Antibiótico lipopeptídeo",
+      "indicacoes": "Infecções por bactérias Gram-positivas, incluindo cepas multirresistentes (ex.: MRSA).",
+      "mecanismo": "Insere-se na membrana celular bacteriana, causando despolarização e morte celular."
+    },
+    "linezolida": {
+      "classe": "Antibiótico oxazolidinona",
+      "indicacoes": "Infecções por Gram-positivos multirresistentes (incluindo MRSA e enterococo resistente à vancomicina).",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, impedindo a formação do complexo de iniciação da síntese proteica bacteriana."
+    },
+    "tedizolida": {
+      "classe": "Antibiótico oxazolidinona",
+      "indicacoes": "Infecções por Gram-positivos multirresistentes (incluindo MRSA e enterococo resistente à vancomicina).",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, impedindo a formação do complexo de iniciação da síntese proteica bacteriana."
+    },
+    "cloranfenicol": {
+      "classe": "Antibiótico fenicol",
+      "indicacoes": "Infecções graves selecionadas, quando outras opções não são adequadas, devido ao perfil de toxicidade.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, inibindo a peptidil-transferase e a síntese proteica bacteriana."
+    },
+    "tianfenicol": {
+      "classe": "Antibiótico fenicol",
+      "indicacoes": "Infecções graves selecionadas, quando outras opções não são adequadas, devido ao perfil de toxicidade.",
+      "mecanismo": "Liga-se à subunidade ribossomal 50S, inibindo a peptidil-transferase e a síntese proteica bacteriana."
+    },
+    "polimixina b": {
+      "classe": "Antibiótico polipeptídico (polimixina)",
+      "indicacoes": "Infecções por bactérias Gram-negativas multirresistentes, uso tópico ou sistêmico restrito.",
+      "mecanismo": "Atua como detergente catiônico sobre a membrana externa de bactérias Gram-negativas, aumentando sua permeabilidade."
+    },
+    "bacitracina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "gramicidina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "tirotricina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "mupirocina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "retapamulina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "nitrofural": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "mandelamina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "nitroxolina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "clorfenesina": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "ácido fusídico": {
+      "classe": "Antimicrobiano de uso tópico ou urinário",
+      "indicacoes": "Infecções cutâneas localizadas ou infecções urinárias baixas não complicadas, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (interferência na síntese de parede, membrana ou síntese proteica bacteriana), geralmente restritos a uso tópico ou como antisséptico urinário."
+    },
+    "fosfomicina": {
+      "classe": "Antibiótico fosfonato",
+      "indicacoes": "Infecção urinária não complicada, geralmente em dose única.",
+      "mecanismo": "Inibe a enzima MurA, bloqueando uma etapa inicial da síntese da parede celular bacteriana."
+    },
+    "dactinomicina": {
+      "classe": "Antibiótico antitumoral",
+      "indicacoes": "Uso oncológico especializado (não como antibacteriano de rotina em farmácia comunitária).",
+      "mecanismo": "Intercala-se no DNA (dactinomicina) ou forma ligações cruzadas no DNA (mitomicina), inibindo a replicação celular."
+    },
+    "mitomicina": {
+      "classe": "Antibiótico antitumoral",
+      "indicacoes": "Uso oncológico especializado (não como antibacteriano de rotina em farmácia comunitária).",
+      "mecanismo": "Intercala-se no DNA (dactinomicina) ou forma ligações cruzadas no DNA (mitomicina), inibindo a replicação celular."
+    },
+    "morfina": {
+      "classe": "Analgésico opioide (agonista opioide forte)",
+      "indicacoes": "Dor moderada a intensa, incluindo dor oncológica e pós-operatória.",
+      "mecanismo": "Agonista dos receptores opioides μ (mu), reduzindo a percepção da dor no sistema nervoso central."
+    },
+    "metadona": {
+      "classe": "Analgésico opioide (agonista opioide forte)",
+      "indicacoes": "Dor crônica intensa; também usada em programas de manutenção para dependência de opioides.",
+      "mecanismo": "Agonista dos receptores opioides μ, com meia-vida longa; também antagoniza receptores NMDA."
+    },
+    "petidina": {
+      "classe": "Analgésico opioide (agonista opioide forte)",
+      "indicacoes": "Dor moderada a intensa, incluindo uso obstétrico e pré-anestésico.",
+      "mecanismo": "Agonista dos receptores opioides μ, com potência inferior à morfina e ação mais curta."
+    },
+    "fentanila": {
+      "classe": "Analgésico opioide (agonista opioide forte)",
+      "indicacoes": "Dor intensa, especialmente em anestesia e dor oncológica (uso transdérmico/parenteral).",
+      "mecanismo": "Agonista potente dos receptores opioides μ, com início de ação rápido e alta lipossolubilidade."
+    },
+    "tapentadol": {
+      "classe": "Analgésico opioide (mecanismo duplo)",
+      "indicacoes": "Dor moderada a intensa, aguda ou crônica.",
+      "mecanismo": "Agonista dos receptores opioides μ combinado à inibição da recaptação de noradrenalina."
+    },
+    "oxicodona": {
+      "classe": "Analgésico opioide (agonista opioide forte)",
+      "indicacoes": "Dor moderada a intensa.",
+      "mecanismo": "Agonista dos receptores opioides μ e kappa no sistema nervoso central."
+    },
+    "hidrocodona": {
+      "classe": "Analgésico opioide (agonista opioide)",
+      "indicacoes": "Dor moderada; antitussígeno em algumas formulações.",
+      "mecanismo": "Agonista dos receptores opioides μ."
+    },
+    "hidromorfona": {
+      "classe": "Analgésico opioide (agonista opioide forte)",
+      "indicacoes": "Dor moderada a intensa.",
+      "mecanismo": "Agonista dos receptores opioides μ, com maior potência que a morfina."
+    },
+    "buprenorfina": {
+      "classe": "Analgésico opioide (agonista parcial)",
+      "indicacoes": "Dor moderada a intensa; tratamento de dependência de opioides.",
+      "mecanismo": "Agonista parcial dos receptores opioides μ e antagonista kappa, com efeito teto para depressão respiratória."
+    },
+    "codeína": {
+      "classe": "Analgésico opioide fraco / antitussígeno",
+      "indicacoes": "Dor leve a moderada; supressão da tosse.",
+      "mecanismo": "Agonista opioide fraco; parcialmente convertido em morfina no fígado (via CYP2D6)."
+    },
+    "tramadol": {
+      "classe": "Analgésico opioide (mecanismo duplo)",
+      "indicacoes": "Dor moderada a intensa.",
+      "mecanismo": "Agonista fraco dos receptores opioides μ combinado à inibição da recaptação de serotonina e noradrenalina."
+    },
+    "dextropropoxifeno": {
+      "classe": "Analgésico opioide fraco",
+      "indicacoes": "Dor leve a moderada.",
+      "mecanismo": "Agonista opioide fraco dos receptores μ, estruturalmente relacionado à metadona."
+    },
+    "nalbufina": {
+      "classe": "Analgésico opioide (agonista-antagonista)",
+      "indicacoes": "Dor moderada a intensa.",
+      "mecanismo": "Agonista dos receptores kappa e antagonista parcial dos receptores μ."
+    },
+    "anfetamina": {
+      "classe": "Psicoestimulante (anfetamínico)",
+      "indicacoes": "Transtorno de déficit de atenção e hiperatividade (TDAH); narcolepsia, conforme o país.",
+      "mecanismo": "Aumenta a liberação e bloqueia a recaptação de dopamina e noradrenalina nas terminações nervosas."
+    },
+    "dexanfetamina": {
+      "classe": "Psicoestimulante (anfetamínico)",
+      "indicacoes": "Transtorno de déficit de atenção e hiperatividade (TDAH); narcolepsia, conforme o país.",
+      "mecanismo": "Aumenta a liberação e bloqueia a recaptação de dopamina e noradrenalina nas terminações nervosas."
+    },
+    "levanfetamina": {
+      "classe": "Psicoestimulante (anfetamínico)",
+      "indicacoes": "Transtorno de déficit de atenção e hiperatividade (TDAH); narcolepsia, conforme o país.",
+      "mecanismo": "Aumenta a liberação e bloqueia a recaptação de dopamina e noradrenalina nas terminações nervosas."
+    },
+    "metilfenidato": {
+      "classe": "Psicoestimulante",
+      "indicacoes": "Transtorno de déficit de atenção e hiperatividade (TDAH); narcolepsia.",
+      "mecanismo": "Inibe a recaptação de dopamina e noradrenalina, aumentando sua concentração na fenda sináptica."
+    },
+    "lisdexanfetamina": {
+      "classe": "Psicoestimulante (pró-fármaco anfetamínico)",
+      "indicacoes": "Transtorno de déficit de atenção e hiperatividade (TDAH); transtorno da compulsão alimentar.",
+      "mecanismo": "Pró-fármaco convertido em dexanfetamina no organismo, que aumenta a neurotransmissão dopaminérgica e noradrenérgica."
+    },
+    "dronabinol": {
+      "classe": "Canabinoide sintético",
+      "indicacoes": "Náusea e vômito associados à quimioterapia; estímulo do apetite.",
+      "mecanismo": "Agonista dos receptores canabinoides CB1/CB2."
+    },
+    "diazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "clonazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "alprazolam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "bromazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "lorazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "clordiazepóxido": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "clorazepato": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "flurazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "nitrazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "triazolam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "midazolam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "oxazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "temazepam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "estazolam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "zolpidem": {
+      "classe": "Hipnótico não benzodiazepínico (análogo Z)",
+      "indicacoes": "Insônia, tratamento de curta duração.",
+      "mecanismo": "Agonista seletivo do receptor GABA-A (subunidade alfa-1), com efeito predominantemente hipnótico."
+    },
+    "zopiclona": {
+      "classe": "Hipnótico não benzodiazepínico (análogo Z)",
+      "indicacoes": "Insônia, tratamento de curta duração.",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, de forma semelhante aos benzodiazepínicos."
+    },
+    "eszopiclona": {
+      "classe": "Hipnótico não benzodiazepínico (análogo Z)",
+      "indicacoes": "Insônia, tratamento de curta duração.",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, de forma semelhante aos benzodiazepínicos."
+    },
+    "fenobarbital": {
+      "classe": "Anticonvulsivante / sedativo barbitúrico",
+      "indicacoes": "Epilepsia (diversas formas de crise); sedação.",
+      "mecanismo": "Potencializa e prolonga a abertura dos canais de cloreto mediados pelo GABA-A, deprimindo a atividade neuronal."
+    },
+    "cetamina": {
+      "classe": "Anestésico dissociativo",
+      "indicacoes": "Indução e manutenção de anestesia; escetamina também em depressão resistente ao tratamento.",
+      "mecanismo": "Antagonista dos receptores NMDA de glutamato."
+    },
+    "escetamina": {
+      "classe": "Anestésico dissociativo",
+      "indicacoes": "Indução e manutenção de anestesia; escetamina também em depressão resistente ao tratamento.",
+      "mecanismo": "Antagonista dos receptores NMDA de glutamato."
+    },
+    "carisoprodol": {
+      "classe": "Relaxante muscular de ação central",
+      "indicacoes": "Espasmo muscular agudo doloroso.",
+      "mecanismo": "Metabolizado em meprobamato; deprime a atividade do sistema nervoso central, com ação relaxante muscular."
+    },
+    "modafinila": {
+      "classe": "Estimulante do sistema nervoso central (promotor de vigília)",
+      "indicacoes": "Narcolepsia e outros distúrbios com sonolência excessiva.",
+      "mecanismo": "Mecanismo não totalmente elucidado; envolve modulação dopaminérgica e de outros sistemas de vigília no SNC."
+    },
+    "armodafinila": {
+      "classe": "Estimulante do sistema nervoso central (promotor de vigília)",
+      "indicacoes": "Narcolepsia e outros distúrbios com sonolência excessiva.",
+      "mecanismo": "Mecanismo não totalmente elucidado; envolve modulação dopaminérgica e de outros sistemas de vigília no SNC."
+    },
+    "sibutramina": {
+      "classe": "Anorexígeno (inibidor de recaptação)",
+      "indicacoes": "Obesidade, como adjuvante de dieta e exercício (uso restrito).",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina, promovendo saciedade."
+    },
+    "anfepramona": {
+      "classe": "Anorexígeno (anfetamínico ou correlato)",
+      "indicacoes": "Obesidade, como adjuvante de dieta e exercício (uso restrito e por tempo limitado).",
+      "mecanismo": "Estimula a liberação de catecolaminas no SNC, promovendo saciedade e redução do apetite."
+    },
+    "femproporex": {
+      "classe": "Anorexígeno (anfetamínico ou correlato)",
+      "indicacoes": "Obesidade, como adjuvante de dieta e exercício (uso restrito e por tempo limitado).",
+      "mecanismo": "Estimula a liberação de catecolaminas no SNC, promovendo saciedade e redução do apetite."
+    },
+    "fendimetrazina": {
+      "classe": "Anorexígeno (anfetamínico ou correlato)",
+      "indicacoes": "Obesidade, como adjuvante de dieta e exercício (uso restrito e por tempo limitado).",
+      "mecanismo": "Estimula a liberação de catecolaminas no SNC, promovendo saciedade e redução do apetite."
+    },
+    "fentermina": {
+      "classe": "Anorexígeno (anfetamínico ou correlato)",
+      "indicacoes": "Obesidade, como adjuvante de dieta e exercício (uso restrito e por tempo limitado).",
+      "mecanismo": "Estimula a liberação de catecolaminas no SNC, promovendo saciedade e redução do apetite."
+    },
+    "mazindol": {
+      "classe": "Anorexígeno (anfetamínico ou correlato)",
+      "indicacoes": "Obesidade, como adjuvante de dieta e exercício (uso restrito e por tempo limitado).",
+      "mecanismo": "Estimula a liberação de catecolaminas no SNC, promovendo saciedade e redução do apetite."
+    },
+    "mefenorex": {
+      "classe": "Anorexígeno (anfetamínico ou correlato)",
+      "indicacoes": "Obesidade, como adjuvante de dieta e exercício (uso restrito e por tempo limitado).",
+      "mecanismo": "Estimula a liberação de catecolaminas no SNC, promovendo saciedade e redução do apetite."
+    },
+    "isotretinoína": {
+      "classe": "Retinoide sistêmico",
+      "indicacoes": "Acne nodulocística grave refratária a outros tratamentos.",
+      "mecanismo": "Reduz o tamanho e a secreção das glândulas sebáceas e normaliza a queratinização folicular; ação mediada por receptores nucleares de ácido retinoico."
+    },
+    "acitretina": {
+      "classe": "Retinoide sistêmico",
+      "indicacoes": "Psoríase grave e outras dermatoses de queratinização.",
+      "mecanismo": "Normaliza a proliferação e diferenciação dos queratinócitos via receptores nucleares de ácido retinoico."
+    },
+    "adapaleno": {
+      "classe": "Retinoide tópico",
+      "indicacoes": "Acne vulgar.",
+      "mecanismo": "Normaliza a queratinização folicular e reduz a formação de comedões via receptores de ácido retinoico."
+    },
+    "tretinoína": {
+      "classe": "Retinoide tópico",
+      "indicacoes": "Acne vulgar.",
+      "mecanismo": "Normaliza a queratinização folicular e reduz a formação de comedões via receptores de ácido retinoico."
+    },
+    "bexaroteno": {
+      "classe": "Retinoide (rexinoide) sistêmico",
+      "indicacoes": "Linfoma cutâneo de células T.",
+      "mecanismo": "Ativa seletivamente os receptores retinoides X (RXR), modulando a proliferação e diferenciação celular."
+    },
+    "ftalimidoglutarimida (talidomida)": {
+      "classe": "Imunomodulador",
+      "indicacoes": "Hanseníase (eritema nodoso hansênico) e mieloma múltiplo.",
+      "mecanismo": "Ação imunomoduladora e anti-inflamatória, incluindo inibição do TNF-alfa; efeito antiangiogênico. Uso contraindicado na gestação por risco teratogênico grave."
+    },
+    "lenalidomida": {
+      "classe": "Imunomodulador (análogo da talidomida)",
+      "indicacoes": "Mieloma múltiplo e outras neoplasias hematológicas selecionadas.",
+      "mecanismo": "Ação imunomoduladora, antiangiogênica e antineoplásica; análogos estruturais da talidomida com perfil de eficácia distinto."
+    },
+    "pomalidomida": {
+      "classe": "Imunomodulador (análogo da talidomida)",
+      "indicacoes": "Mieloma múltiplo e outras neoplasias hematológicas selecionadas.",
+      "mecanismo": "Ação imunomoduladora, antiangiogênica e antineoplásica; análogos estruturais da talidomida com perfil de eficácia distinto."
+    },
+    "testosterona": {
+      "classe": "Andrógeno / esteroide anabolizante",
+      "indicacoes": "Reposição em hipogonadismo masculino.",
+      "mecanismo": "Ativa receptores androgênicos, promovendo efeitos anabólicos e virilizantes."
+    },
+    "metiltestosterona": {
+      "classe": "Andrógeno / esteroide anabolizante",
+      "indicacoes": "Reposição em hipogonadismo masculino.",
+      "mecanismo": "Ativa receptores androgênicos, promovendo efeitos anabólicos e virilizantes."
+    },
+    "nandrolona": {
+      "classe": "Esteroide anabolizante androgênico",
+      "indicacoes": "Uso terapêutico restrito (ex.: certas formas de caquexia ou osteoporose); amplamente associado ao uso não terapêutico para ganho de massa muscular.",
+      "mecanismo": "Ativa receptores androgênicos, estimulando a síntese proteica muscular; efeitos virilizantes associados."
+    },
+    "oxandrolona": {
+      "classe": "Esteroide anabolizante androgênico",
+      "indicacoes": "Uso terapêutico restrito (ex.: certas formas de caquexia ou osteoporose); amplamente associado ao uso não terapêutico para ganho de massa muscular.",
+      "mecanismo": "Ativa receptores androgênicos, estimulando a síntese proteica muscular; efeitos virilizantes associados."
+    },
+    "estanozolol": {
+      "classe": "Esteroide anabolizante androgênico",
+      "indicacoes": "Uso terapêutico restrito (ex.: certas formas de caquexia ou osteoporose); amplamente associado ao uso não terapêutico para ganho de massa muscular.",
+      "mecanismo": "Ativa receptores androgênicos, estimulando a síntese proteica muscular; efeitos virilizantes associados."
+    },
+    "boldenona": {
+      "classe": "Esteroide anabolizante androgênico",
+      "indicacoes": "Uso terapêutico restrito (ex.: certas formas de caquexia ou osteoporose); amplamente associado ao uso não terapêutico para ganho de massa muscular.",
+      "mecanismo": "Ativa receptores androgênicos, estimulando a síntese proteica muscular; efeitos virilizantes associados."
+    },
+    "metandienona ou metandrostenolona": {
+      "classe": "Esteroide anabolizante androgênico",
+      "indicacoes": "Uso terapêutico restrito (ex.: certas formas de caquexia ou osteoporose); amplamente associado ao uso não terapêutico para ganho de massa muscular.",
+      "mecanismo": "Ativa receptores androgênicos, estimulando a síntese proteica muscular; efeitos virilizantes associados."
+    },
+    "mesterolona": {
+      "classe": "Esteroide anabolizante androgênico",
+      "indicacoes": "Uso terapêutico restrito (ex.: certas formas de caquexia ou osteoporose); amplamente associado ao uso não terapêutico para ganho de massa muscular.",
+      "mecanismo": "Ativa receptores androgênicos, estimulando a síntese proteica muscular; efeitos virilizantes associados."
+    },
+    "drostanolona": {
+      "classe": "Esteroide anabolizante androgênico",
+      "indicacoes": "Uso terapêutico restrito (ex.: certas formas de caquexia ou osteoporose); amplamente associado ao uso não terapêutico para ganho de massa muscular.",
+      "mecanismo": "Ativa receptores androgênicos, estimulando a síntese proteica muscular; efeitos virilizantes associados."
+    },
+    "somatropina (hormônio do crescimento humano)": {
+      "classe": "Hormônio de crescimento (GH recombinante)",
+      "indicacoes": "Deficiência de hormônio do crescimento e outras condições específicas de baixa estatura.",
+      "mecanismo": "Atua no receptor de GH, estimulando a produção hepática de IGF-1 e promovendo crescimento linear e efeitos metabólicos."
+    },
+    "somapacitana": {
+      "classe": "Hormônio de crescimento (GH recombinante)",
+      "indicacoes": "Deficiência de hormônio do crescimento e outras condições específicas de baixa estatura.",
+      "mecanismo": "Atua no receptor de GH, estimulando a produção hepática de IGF-1 e promovendo crescimento linear e efeitos metabólicos."
+    },
+    "somatrogona": {
+      "classe": "Hormônio de crescimento (GH recombinante)",
+      "indicacoes": "Deficiência de hormônio do crescimento e outras condições específicas de baixa estatura.",
+      "mecanismo": "Atua no receptor de GH, estimulando a produção hepática de IGF-1 e promovendo crescimento linear e efeitos metabólicos."
+    },
+    "prasterona (deidroepiandrosterona - dhea)": {
+      "classe": "Precursor hormonal esteroide",
+      "indicacoes": "Uso terapêutico restrito, conforme indicação específica.",
+      "mecanismo": "Precursor de andrógenos e estrogênios, convertido perifericamente em hormônios sexuais ativos."
+    }
+  },
+  "excecoes": {
+    "fenobarbital": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "metilfenobarbital (prominal)": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "barbital": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "barbexaclona": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "zolpidem": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: preparações com até 10 mg de zolpidem ou zaleplona por unidade posológica são excetuadas da Notificação de Receita B e exigem Receita de Controle Especial, 2 vias, com a mesma frase obrigatória de retenção. Confirme a dosagem da apresentação antes de aplicar esta exceção.",
+      "quantidade_maxima": null
+    },
+    "zaleplona": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: preparações com até 10 mg de zolpidem ou zaleplona por unidade posológica são excetuadas da Notificação de Receita B e exigem Receita de Controle Especial, 2 vias, com a mesma frase obrigatória de retenção. Confirme a dosagem da apresentação antes de aplicar esta exceção.",
+      "quantidade_maxima": null
+    },
+    "tramadol": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo: preparações à base de tramadol, isoladas ou associadas, com até 100 mg de tramadol por unidade posológica, são excetuadas da Notificação de Receita A e exigem Receita de Controle Especial, 2 vias, com a mesma frase obrigatória de retenção. Confirme a dosagem da apresentação antes de aplicar esta exceção.",
+      "quantidade_maxima": null
+    }
   }
 }

@@ -267,6 +267,20 @@
     color: var(--amber); background: rgba(232,184,75,.08); border: 1px solid rgba(232,184,75,.3);
     padding: 3px 10px; border-radius: 20px; margin-top:8px;
   }
+  .excecao-alerta{
+    background: linear-gradient(135deg, rgba(232,184,62,.12), rgba(232,184,62,.04));
+    border: 1px solid var(--tarja-amarela); border-left: 4px solid var(--tarja-amarela);
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 18px;
+  }
+  .excecao-titulo{ font-size: .88rem; font-weight: 800; color: var(--tarja-amarela); margin-bottom: 6px; }
+  .excecao-alerta p{ margin: 4px 0 0; font-size: .83rem; color: var(--text-gray); line-height: 1.55; }
+  .excecao-alerta .excecao-qtd{ margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(232,184,62,.35); }
+  .cat-tag-exc{
+    display:inline-block; font-size:.62rem; text-transform:none; font-weight:800;
+    color: var(--tarja-amarela); background: rgba(232,184,62,.12); border: 1px solid var(--tarja-amarela);
+    padding: 2px 8px; border-radius: 20px; margin-left: 4px; letter-spacing:0;
+  }
+
   .btn-bula{
     display:inline-flex; align-items:center; gap:6px; border: 1px solid var(--red-bright); color: var(--red-bright);
     background: transparent; padding: 8px 18px; border-radius: 20px; font-size:.8rem; font-weight:700;
@@ -440,7 +454,7 @@
 {
   "_aviso": "Gerado automaticamente a partir da Portaria 344/98. Conferir contra o texto oficial antes de publicar mudanças.",
   "_fonte": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&tipo=POR&numeroAto=00000344&seqAto=000&valorAno=1998&orgao=SVS%2FMS&codTipo=&desItem=&desItemFim=&cod_menu=1696&cod_modulo=134&pesquisa=true",
-  "_capturado_em": "2026-07-25",
+  "_capturado_em": "2026-07-28",
   "listas": {
     "A1": {
       "titulo": "LISTA DAS SUBSTÂNCIAS ENTORPECENTES (Sujeitas à Notificação de Receita \"A\")",
@@ -2175,6 +2189,71 @@
       "classe": "Precursor hormonal esteroide",
       "indicacoes": "Uso terapêutico restrito, conforme indicação específica.",
       "mecanismo": "Precursor de andrógenos e estrogênios, convertido perifericamente em hormônios sexuais ativos."
+    }
+  },
+  "excecoes": {
+    "fenobarbital": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "metilfenobarbital (prominal)": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "barbital": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "barbexaclona": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: estes 4 barbitúricos (fenobarbital, metilfenobarbital/prominal, barbital e barbexaclona) são nominalmente excetuados da Notificação de Receita B e devem ser prescritos em Receita de Controle Especial, 2 vias, com a frase obrigatória \"VENDA SOB PRESCRIÇÃO MÉDICA - SÓ PODE SER VENDIDO COM RETENÇÃO DA RECEITA\" na rotulagem/bula. Os demais barbitúricos da Lista B1 (ex.: pentobarbital, secobarbital) NÃO estão citados neste adendo e seguem a regra padrão da B1.",
+      "quantidade_maxima": "Uso como anticonvulsivante: quantidade para tratamento de até 6 meses (fonte: bula/InfoSUS)."
+    },
+    "zolpidem": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: preparações com até 10 mg de zolpidem ou zaleplona por unidade posológica são excetuadas da Notificação de Receita B e exigem Receita de Controle Especial, 2 vias, com a mesma frase obrigatória de retenção. Confirme a dosagem da apresentação antes de aplicar esta exceção.",
+      "quantidade_maxima": null
+    },
+    "zaleplona": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo da Lista B1: preparações com até 10 mg de zolpidem ou zaleplona por unidade posológica são excetuadas da Notificação de Receita B e exigem Receita de Controle Especial, 2 vias, com a mesma frase obrigatória de retenção. Confirme a dosagem da apresentação antes de aplicar esta exceção.",
+      "quantidade_maxima": null
+    },
+    "tramadol": {
+      "receita": "Receita de Controle Especial (branca, 2 vias)",
+      "vias": 2,
+      "validade_dias": 30,
+      "retencao": true,
+      "cor": "branca",
+      "motivo": "Adendo: preparações à base de tramadol, isoladas ou associadas, com até 100 mg de tramadol por unidade posológica, são excetuadas da Notificação de Receita A e exigem Receita de Controle Especial, 2 vias, com a mesma frase obrigatória de retenção. Confirme a dosagem da apresentação antes de aplicar esta exceção.",
+      "quantidade_maxima": null
     }
   }
 }
@@ -6663,12 +6742,16 @@ const CODIGOS_ORDEM = ['A1','A2','A3','B1','B2','C1','C2','C3','C5','ANTIMICROBI
 
 const dadosMarcas = JSON.parse(document.getElementById('dados-marcas').textContent);
 const marcas = dadosMarcas.marcas || {};
+const excecoes = dadosBrutos.excecoes || {};
 
 let indice = [];
 CODIGOS_ORDEM.forEach(codigo => {
   if(!listas[codigo]) return;
   listas[codigo].substancias.forEach(nome => {
-    indice.push({ nome, codigo, cor: REGRAS_COR[codigo] });
+    const exc = excecoes[nome.toLowerCase()];
+    // Se há exceção de adendo, a cor exibida (dot, badge, filtro) reflete a
+    // receita REAL exigida, não a cor padrão da lista de origem.
+    indice.push({ nome, codigo, cor: exc ? exc.cor : REGRAS_COR[codigo] });
   });
 });
 
@@ -6794,6 +6877,20 @@ function renderConteudo(){
   const lista = listas[item.codigo];
   const bulaUrl = 'https://consultas.anvisa.gov.br/#/bulario/?nomeProduto=' + encodeURIComponent(item.nome.split('(')[0].trim());
   const perfil = (dadosBrutos.detalhes || {})[item.nome.toLowerCase()];
+  const excecao = excecoes[item.nome.toLowerCase()];
+
+  // Se há exceção de adendo, a regra exibida (receita/vias/validade/retenção)
+  // é a da exceção, não a padrão da lista -- é o que vale na prática.
+  const regraExibida = excecao || lista.regra;
+  const corExibida = excecao ? excecao.cor : item.cor;
+
+  const blocoExcecao = excecao ? `
+    <div class="excecao-alerta">
+      <div class="excecao-titulo">⚠️ Exceção de adendo: foge da regra padrão da Lista ${item.codigo}</div>
+      <p>${excecao.motivo}</p>
+      ${excecao.quantidade_maxima ? `<p class="excecao-qtd"><b>Quantidade máxima por receita:</b> ${excecao.quantidade_maxima}</p>` : ''}
+    </div>
+  ` : '';
 
   const blocoPerfil = perfil ? `
     <div class="perfil-farmacologico">
@@ -6822,30 +6919,32 @@ function renderConteudo(){
     <div class="main-header">
       <div>
         <h2>${item.nome}</h2>
-        <div class="cat-tag">Lista ${item.codigo} · ${LABEL_COR[item.cor]}</div>
+        <div class="cat-tag">Lista ${item.codigo} · ${LABEL_COR[item.cor]}${excecao ? ' <span class="cat-tag-exc">⚠️ regra de exceção aplicada</span>' : ''}</div>
       </div>
       <a class="btn-bula" href="${bulaUrl}" target="_blank" rel="noopener">Ver bula ↗</a>
     </div>
 
+    ${blocoExcecao}
+
     <div class="receita-headline">
-      <div class="swatch ${item.cor}"></div>
-      <div class="txt">${lista.regra.receita}
-        <small>${lista.titulo}</small>
+      <div class="swatch ${corExibida}"></div>
+      <div class="txt">${regraExibida.receita}
+        <small>${excecao ? 'Regra de exceção (adendo) — não a regra padrão da ' + lista.titulo : lista.titulo}</small>
       </div>
     </div>
 
     <div class="info-bar">
       <div class="info-field">
         <div class="field-icon">📑</div>
-        <div class="field-inputs"><label>Vias</label><div class="valor">${lista.regra.vias}${lista.regra.vias === 1 ? ' via' : ' vias'}</div></div>
+        <div class="field-inputs"><label>Vias</label><div class="valor">${regraExibida.vias}${regraExibida.vias === 1 ? ' via' : ' vias'}</div></div>
       </div>
       <div class="info-field">
         <div class="field-icon">📅</div>
-        <div class="field-inputs"><label>Validade</label><div class="valor">${lista.regra.validade_dias} dias</div></div>
+        <div class="field-inputs"><label>Validade</label><div class="valor">${regraExibida.validade_dias} dias</div></div>
       </div>
       <div class="info-field">
         <div class="field-icon">🗂️</div>
-        <div class="field-inputs"><label>Retenção</label><div class="valor">${lista.regra.retencao ? 'Sim' : 'Não'}</div></div>
+        <div class="field-inputs"><label>Retenção</label><div class="valor">${regraExibida.retencao ? 'Sim' : 'Não'}</div></div>
       </div>
     </div>
 

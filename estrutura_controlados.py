@@ -126,6 +126,18 @@ def main():
         saida["detalhes"] = {}
         print("Aviso: detalhes_farmacologicos.json não encontrado -- página ficará sem classe/indicação/mecanismo.")
 
+    # Mescla exceções de adendo (substâncias que fogem da regra padrão da
+    # própria lista, ex: fenobarbital exige Controle Especial e não
+    # Notificação B, mesmo pertencendo à Lista B1).
+    caminho_excecoes = Path("excecoes.json")
+    if caminho_excecoes.exists():
+        excecoes = json.loads(caminho_excecoes.read_text(encoding="utf-8"))
+        saida["excecoes"] = excecoes
+        print(f"Exceções de adendo: {len(excecoes)} substância(s) com regra diferente da lista padrão")
+    else:
+        saida["excecoes"] = {}
+        print("Aviso: excecoes.json não encontrado -- página não sinalizará exceções de adendo.")
+
     Path("controlados.json").write_text(
         json.dumps(saida, ensure_ascii=False, indent=2), encoding="utf-8"
     )
