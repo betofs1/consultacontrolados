@@ -218,9 +218,9 @@ add(["Dronabinol"], "Canabinoide sintético",
     "Agonista dos receptores canabinoides CB1/CB2.")
 
 add(["Diazepam","Clonazepam","Alprazolam","Bromazepam","Lorazepam","Clordiazepóxido","Clorazepato",
-     "Flurazepam","Nitrazepam","Triazolam","Midazolam","Oxazepam","Temazepam","Estazolam"],
+     "Flurazepam","Nitrazepam","Triazolam","Midazolam","Oxazepam","Temazepam","Estazolam","Clobazam"],
     "Ansiolítico/hipnótico benzodiazepínico",
-    "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+    "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
     "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal.")
 
 add(["Zolpidem"], "Hipnótico não benzodiazepínico (análogo Z)",
@@ -295,6 +295,146 @@ add(["Somatropina (hormônio do crescimento humano)","Somapacitana","Somatrogona
 add(["Prasterona (deidroepiandrosterona - DHEA)"], "Precursor hormonal esteroide",
     "Uso terapêutico restrito, conforme indicação específica.",
     "Precursor de andrógenos e estrogênios, convertido perifericamente em hormônios sexuais ativos.")
+
+# ============ LISTA C1: cobertura ampla por classe (antidepressivos, antipsicóticos, anticonvulsivantes etc.) ============
+
+add(["Amitriptilina","Amoxapina","Butriptilina","Clomipramina","Desipramina","Dibenzepina",
+     "Dimetracrina","Doxepina","Imipramina","Imipraminóxido","Maprotilina","Mianserina",
+     "Nortriptilina","Noxiptilina","Opipramol","Protriptilina","Trimipramina"],
+    "Antidepressivo tricíclico/tetracíclico",
+    "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+    "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada.")
+
+add(["Citalopram","Escitalopram","Fluoxetina","Fluvoxamina","Paroxetina","Sertralina"],
+    "Antidepressivo ISRS (inibidor seletivo da recaptação de serotonina)",
+    "Depressão, transtornos de ansiedade, transtorno obsessivo-compulsivo e outros transtornos relacionados.",
+    "Inibe seletivamente a recaptação de serotonina na fenda sináptica, aumentando sua disponibilidade.")
+
+add(["Desvenlafaxina","Duloxetina","Levomilnaciprana","Milnaciprana","Venlafaxina"],
+    "Antidepressivo IRSN (inibidor da recaptação de serotonina e noradrenalina)",
+    "Depressão e transtornos de ansiedade; alguns também usados em dor neuropática e fibromialgia.",
+    "Inibe a recaptação de serotonina e noradrenalina na fenda sináptica.")
+
+add(["Fenelzina","Feniprazina","Iproclozida","Isocarboxazida","Moclobemida","Nialamida",
+     "Tranilcipromina","Selegilina","Rasagilina","Caroxazona"],
+    "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+    "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+    "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina.")
+
+add(["Agomelatina","Bupropiona","Mirtazapina","Nefazodona","Reboxetina","Tianeptina","Trazodona",
+     "Vilazodona","Vortioxetina","Nomifensina","Minaprina"],
+    "Antidepressivo atípico",
+    "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+    "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina).")
+
+add(["Dapoxetina"], "Inibidor seletivo da recaptação de serotonina (ação curta)",
+    "Ejaculação precoce.",
+    "Inibe a recaptação de serotonina de forma rápida e curta, retardando o reflexo ejaculatório.")
+
+add(["Atomoxetina"], "Inibidor seletivo da recaptação de noradrenalina",
+    "Transtorno de déficit de atenção e hiperatividade (TDAH), como alternativa não estimulante.",
+    "Inibe seletivamente a recaptação de noradrenalina, sem ação estimulante direta sobre a dopamina.")
+
+add(["Clorpromazina","Levomepromazina","Flufenazina","Perfenazina","Trifluoperazina","Tioridazina",
+     "Mesoridazina","Promazina","Proclorperazina","Metopromazina","Mepazina",
+     "Periciazina (propericiazina)","Dixirazina","Homofenazina","Imicloprazina","Butaperazina",
+     "Tioproperazina","Haloperidol","Droperidol","Moperona","Trifluperidol","Penfluridol","Pimozida",
+     "Clorprotixeno","Tiotixeno","Zuclopentixol","Flupentixol","Clotiapina","Loxapina","Oxipertina",
+     "Sulpirida","Sultoprida","Tiaprida","Amissulprida","Veraliprida"],
+    "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+    "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+    "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central.")
+
+add(["Aripiprazol","Asenapina","Brexpiprazol","Clozapina","Lurasidona","Olanzapina","Paliperidona",
+     "Quetiapina","Risperidona","Ziprasidona","Zotepina","Pipamperona","Pipotiazina"],
+    "Antipsicótico atípico (de segunda geração)",
+    "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+    "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos.")
+
+add(["Ácido valpróico","Divalproato de sódio","Valproato sódico","Beclamida","Brivaracetam",
+     "Carbamazepina","Cenobamato","Estiripentol","Etossuximida","Fenitoina","Gabapentina",
+     "Lacosamida","Lamotrigina","Levetiracetam","Oxcarbazepina","Pregabalina","Primidona",
+     "Rufinamida","Tiagabina","Topiramato","Vigabatrina"],
+    "Anticonvulsivante",
+    "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+    "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva.")
+
+add(["Buspirona"], "Ansiolítico não benzodiazepínico (azapirona)",
+    "Transtorno de ansiedade generalizada.",
+    "Agonista parcial dos receptores serotoninérgicos 5-HT1A.")
+
+add(["Amantadina","Biperideno","Entacapona","Pramipexol","Ropinirol","Rotigotina","Tolcapona",
+     "Pergolida","Lisurida","Deutetrabenazina","Tetrabenazina"],
+    "Antiparkinsoniano / modulador do sistema dopaminérgico",
+    "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+    "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina).")
+
+add(["Donepezila","Galantamina","Rivastigmina","Tacrina","Memantina"], "Antidemencial",
+    "Doença de Alzheimer e outras demências, conforme estágio e fármaco.",
+    "Inibidores da acetilcolinesterase (donepezila, galantamina, rivastigmina, tacrina) aumentam a disponibilidade de acetilcolina; memantina antagoniza receptores NMDA de glutamato.")
+
+add(["Desflurano","Enflurano","Halotano","Isoflurano","Metoxiflurano","Sevoflurano"],
+    "Anestésico geral inalatório",
+    "Indução e/ou manutenção de anestesia geral.",
+    "Deprime o sistema nervoso central por mecanismos ainda não totalmente elucidados, envolvendo canais iônicos neuronais, induzindo perda de consciência.")
+
+add(["Etomidato","Propofol","Propanidina","Hidroxidiona","Dexmedetomidina"],
+    "Anestésico geral / sedativo intravenoso",
+    "Indução e manutenção de anestesia geral; dexmedetomidina também usada como sedativo em UTI.",
+    "Potencializa a ação do GABA no receptor GABA-A (maioria) ou age em receptores alfa-2 adrenérgicos (dexmedetomidina), deprimindo o SNC.")
+
+add(["Tetracaína","Proximetacaina","Oxibuprocaína (benoxinato)"], "Anestésico local (uso oftálmico/tópico)",
+    "Anestesia tópica, especialmente oftálmica.",
+    "Bloqueia os canais de sódio voltagem-dependentes nos nervos sensoriais, impedindo a condução do impulso doloroso.")
+
+add(["Ciclopentolato"], "Midriático e cicloplégico anticolinérgico",
+    "Exame oftalmológico (dilatação pupilar) e cicloplegia.",
+    "Antagoniza os receptores muscarínicos da íris e do músculo ciliar, causando midríase e paralisia da acomodação.")
+
+add(["Naloxona","Naltrexona","Metilnaltrexona"], "Antagonista opioide",
+    "Reversão de intoxicação/overdose por opioides (naloxona); manutenção da abstinência (naltrexona); constipação induzida por opioides (metilnaltrexona).",
+    "Bloqueia competitivamente os receptores opioides (principalmente μ), revertendo os efeitos de agonistas opioides.")
+
+add(["Flumazenil"], "Antagonista benzodiazepínico",
+    "Reversão da sedação por benzodiazepínicos (intoxicação ou pós-procedimento).",
+    "Antagoniza competitivamente o receptor GABA-A no sítio benzodiazepínico, revertendo a sedação.")
+
+add(["Lítio"], "Estabilizador de humor",
+    "Transtorno bipolar (fases maníaca e de manutenção).",
+    "Mecanismo não totalmente elucidado; envolve modulação de vias de sinalização intracelular no sistema nervoso central.")
+
+add(["Celecoxibe","Etoricoxibe","Lumiracoxibe","Parecoxibe","Rofecoxibe","Valdecoxibe"],
+    "Anti-inflamatório não esteroide (inibidor seletivo da COX-2)",
+    "Dor e inflamação, especialmente em condições osteoarticulares.",
+    "Inibe seletivamente a enzima ciclo-oxigenase-2 (COX-2), reduzindo a síntese de prostaglandinas pró-inflamatórias com menor impacto na COX-1 gástrica.")
+
+add(["Canabidiol (CBD)"], "Canabinoide não psicoativo",
+    "Formas raras e graves de epilepsia refratária (ex.: síndromes de Dravet e Lennox-Gastaut), conforme registro.",
+    "Ação moduladora sobre o sistema endocanabinoide e outros receptores (ex.: TRPV1, 5-HT1A); mecanismo anticonvulsivante não totalmente elucidado.")
+
+add(["Cisaprida"], "Procinético gastrointestinal",
+    "Distúrbios da motilidade gastrointestinal (uso restrito por risco cardíaco).",
+    "Agonista dos receptores serotoninérgicos 5-HT4, aumentando a motilidade do trato gastrointestinal.")
+
+add(["Loperamida"], "Antidiarreico opioide (ação periférica)",
+    "Diarreia aguda não complicada.",
+    "Agonista dos receptores opioides μ no trato gastrointestinal, reduzindo a motilidade intestinal, com mínima ação central.")
+
+add(["Dissulfiram"], "Sensibilizador ao álcool (dissuasor)",
+    "Tratamento adjuvante da dependência alcoólica.",
+    "Inibe a enzima aldeído desidrogenase, causando acúmulo de acetaldeído e reação desagradável após ingestão de álcool.")
+
+add(["Misoprostol"], "Análogo de prostaglandina E1",
+    "Prevenção de úlcera péptica associada a AINEs; uso obstétrico conforme protocolo específico.",
+    "Atua nos receptores de prostaglandina, com ação citoprotetora gástrica e efeito uterotônico.")
+
+add(["Molnupiravir","Ribavirina"], "Antiviral",
+    "Infecções virais específicas, conforme o fármaco (ex.: COVID-19 para molnupiravir; hepatite C e outras viroses para ribavirina).",
+    "Interfere na replicação viral (molnupiravir induz erros na cópia do RNA viral; ribavirina inibe a síntese de RNA/DNA viral por mecanismos variados).")
+
+add(["Teriflunomida","Leflunomida"], "Imunomodulador (inibidor da síntese de pirimidinas)",
+    "Esclerose múltipla remitente-recorrente (teriflunomida); artrite reumatoide (leflunomida).",
+    "Inibe a enzima di-hidro-orotato desidrogenase, reduzindo a proliferação de linfócitos ativados.")
 
 with open("detalhes_farmacologicos.json", "w", encoding="utf-8") as f:
     json.dump(detalhes, f, ensure_ascii=False, indent=2)

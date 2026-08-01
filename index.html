@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consulta de Controlados</title>
+<title>FarmaPrática | Consulta de Controlados</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg: #17181a;
@@ -25,7 +25,7 @@
     --amber: #f2b84b;
     --pill-bg: #2c2225;
     --pill-text: #f6cf74;
-    --sidebar-w: 300px;
+    --sidebar-w: 340px;
     --hover-tint: rgba(255,255,255,.055);
     --tarja-amarela: #e8b83e;
     --tarja-amarela-glow: rgba(232,184,62,.22);
@@ -72,10 +72,11 @@
   body.light .theme-toggle .icon-moon{ display:block; }
   body.light{ background: var(--bg) !important; }
   * { box-sizing: border-box; }
+  button, input, select, textarea { font-family: inherit; }
   html,body{ height:100%; }
   body{
     margin:0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
     background:
       radial-gradient(900px 500px at 15% -10%, rgba(239,45,64,.045), transparent 60%),
       radial-gradient(700px 500px at 100% 0%, rgba(242,184,75,.025), transparent 55%),
@@ -90,6 +91,7 @@
 
   /* ---------- Topbar ---------- */
   .topbar-app{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     display:grid;
     grid-template-columns: var(--sidebar-w) 1fr;
     align-items:center;
@@ -143,6 +145,7 @@
 
   /* ---------- Sidebar ---------- */
   .sidebar{
+    font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
     width: var(--sidebar-w);
     flex-shrink:0;
     background: linear-gradient(180deg, var(--sidebar), var(--bg) 130%);
@@ -172,32 +175,70 @@
   .clear-btn:hover{ background: var(--red-bright); color:#fff; }
   .clear-btn.visivel{ display:flex; }
 
-  .filtro-tarjas{ display:flex; gap:6px; flex-wrap:wrap; }
+  .filtro-tarjas{ display:flex; gap:7px; flex-wrap:wrap; }
   .tarja-chip{
-    font-size:.68rem; font-weight:700; padding: 4px 10px; border-radius: 20px;
-    border: 1px solid var(--border); background: var(--panel); color: var(--text-dim);
-    cursor:pointer; transition: all .15s ease;
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:.71rem; font-weight:700; letter-spacing:.2px; padding: 6px 13px 6px 10px;
+    border-radius: 20px; border: 1px solid var(--border); background: var(--panel); color: var(--text-dim);
+    cursor:pointer; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease, background-color .14s ease, color .14s ease;
   }
-  .tarja-chip:hover{ border-color: var(--red-bright); color: var(--text); }
-  .tarja-chip.active{ background: linear-gradient(135deg, var(--red-dark), var(--red)); color:#fff; border-color: transparent; }
-  .tarja-chip.active[data-filtro="amarela"]{ background: linear-gradient(135deg, var(--tarja-amarela), #8a6a1c); }
-  .tarja-chip.active[data-filtro="azul"]{ background: linear-gradient(135deg, var(--tarja-azul), #1c4a75); }
-  .tarja-chip.active[data-filtro="branca"]{ background: linear-gradient(135deg, var(--tarja-branca), #5b2fa8); }
-  .tarja-chip.active[data-filtro="verde"]{ background: linear-gradient(135deg, var(--tarja-verde), #1c5c3a); }
+  .tarja-chip .chip-dot{
+    width:7px; height:7px; border-radius:50%; flex-shrink:0; background: currentColor; opacity:.55;
+    transition: opacity .14s ease, box-shadow .14s ease;
+  }
+  .tarja-chip:hover{
+    border-color: var(--red-bright); color: var(--text);
+    transform: translateY(-1.5px); box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  }
+  .tarja-chip:hover .chip-dot{ opacity:1; }
+  .tarja-chip.active{
+    background: linear-gradient(135deg, var(--red-dark), var(--red)); color:#fff; border-color: transparent;
+    box-shadow: 0 4px 14px var(--red-glow), inset 0 1px 0 rgba(255,255,255,.15);
+  }
+  .tarja-chip[data-filtro="todos"] .chip-dot{ background: var(--red-bright); }
+  .tarja-chip[data-filtro="amarela"] .chip-dot{ background: var(--tarja-amarela); }
+  .tarja-chip[data-filtro="azul"] .chip-dot{ background: var(--tarja-azul); }
+  .tarja-chip[data-filtro="branca"] .chip-dot{ background: var(--tarja-branca); }
+  .tarja-chip[data-filtro="verde"] .chip-dot{ background: var(--tarja-verde); }
+  .tarja-chip.active .chip-dot{ opacity:1 !important; background:#fff !important; box-shadow: 0 0 6px rgba(255,255,255,.8); }
+  .tarja-chip.active[data-filtro="amarela"]{ background: linear-gradient(135deg, var(--tarja-amarela), #8a6a1c); box-shadow: 0 4px 14px var(--tarja-amarela-glow), inset 0 1px 0 rgba(255,255,255,.15); }
+  .tarja-chip.active[data-filtro="azul"]{ background: linear-gradient(135deg, var(--tarja-azul), #1c4a75); box-shadow: 0 4px 14px var(--tarja-azul-glow), inset 0 1px 0 rgba(255,255,255,.15); }
+  .tarja-chip.active[data-filtro="branca"]{ background: linear-gradient(135deg, var(--tarja-branca), #5b2fa8); box-shadow: 0 4px 14px var(--tarja-branca-glow), inset 0 1px 0 rgba(255,255,255,.15); }
+  .tarja-chip.active[data-filtro="verde"]{ background: linear-gradient(135deg, var(--tarja-verde), #1c5c3a); box-shadow: 0 4px 14px var(--tarja-verde-glow), inset 0 1px 0 rgba(255,255,255,.15); }
 
-  .sidebar-list{ flex:1; overflow-y:auto; padding: 4px 10px 20px; }
+  .sidebar-list{ flex:1; overflow-y:auto; padding: 8px 10px 20px; }
   .cat-header{
-    font-size:.72rem; text-transform:uppercase; letter-spacing:.9px; color: var(--amber);
-    font-weight:800; margin: 18px 4px 8px; padding: 4px 0 6px 8px;
-    border-left: 3px solid var(--red-bright); border-bottom: 1px solid var(--border);
-    display:flex; align-items:center; gap:8px;
+    display:flex; align-items:center; gap:9px;
+    width:100%; text-align:left; background: var(--panel); border:1px solid var(--border);
+    border-left: 3px solid var(--red-bright); border-radius: 9px;
+    padding: 9px 11px; margin: 10px 0 5px; cursor:pointer;
+    font-size:.74rem; text-transform:uppercase; letter-spacing:.7px; font-weight:800;
+    color: var(--text-gray); transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
   }
+  .cat-header:hover{ background: var(--card-hover); box-shadow: 0 2px 10px rgba(0,0,0,.14); }
   .cat-header:first-child{ margin-top: 2px; }
+  .cat-header .cat-nome{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .cat-header .cat-count{
+    font-size:.66rem; font-weight:700; background: var(--hover-tint); color: var(--text-dim);
+    padding: 2px 8px; border-radius: 20px; flex-shrink:0;
+  }
+  .cat-header .cat-chevron{
+    flex-shrink:0; width:14px; height:14px; transition: transform .2s ease;
+    opacity:.7;
+  }
+  .cat-header.aberto .cat-chevron{ transform: rotate(90deg); }
   .cat-header.amarela{ color: var(--tarja-amarela); border-left-color: var(--tarja-amarela); }
   .cat-header.azul{ color: var(--tarja-azul); border-left-color: var(--tarja-azul); }
   .cat-header.branca{ color: var(--tarja-branca); border-left-color: var(--tarja-branca); }
   .cat-header.verde{ color: var(--tarja-verde); border-left-color: var(--tarja-verde); }
-  .cat-dot{ width:7px; height:7px; border-radius:50%; flex-shrink:0; box-shadow: 0 0 6px currentColor; }
+  .cat-header.amarela .cat-count{ background: var(--tarja-amarela-glow); color: var(--tarja-amarela); }
+  .cat-header.azul .cat-count{ background: var(--tarja-azul-glow); color: var(--tarja-azul); }
+  .cat-header.branca .cat-count{ background: var(--tarja-branca-glow); color: var(--tarja-branca); }
+  .cat-header.verde .cat-count{ background: var(--tarja-verde-glow); color: var(--tarja-verde); }
+
+  .cat-grupo{ overflow:hidden; }
+  .cat-grupo-itens{ padding: 2px 0 6px 4px; border-left: 2px solid var(--border); margin-left: 10px; }
 
   .drug-item{
     position:relative;
@@ -422,11 +463,11 @@
         <button class="clear-btn" id="clearBusca" onclick="limparBusca()" title="Limpar busca" aria-label="Limpar busca">✕</button>
       </div>
       <div class="filtro-tarjas" id="filtro-tarjas">
-        <span class="tarja-chip active" data-filtro="todos">Todas</span>
-        <span class="tarja-chip" data-filtro="amarela">Notif. A</span>
-        <span class="tarja-chip" data-filtro="azul">Notif. B</span>
-        <span class="tarja-chip" data-filtro="branca">Contr. Especial</span>
-        <span class="tarja-chip" data-filtro="verde">Antimicrobianos</span>
+        <span class="tarja-chip active" data-filtro="todos"><span class="chip-dot"></span>Todas</span>
+        <span class="tarja-chip" data-filtro="amarela"><span class="chip-dot"></span>Notif. A</span>
+        <span class="tarja-chip" data-filtro="azul"><span class="chip-dot"></span>Notif. B</span>
+        <span class="tarja-chip" data-filtro="branca"><span class="chip-dot"></span>Contr. Especial</span>
+        <span class="tarja-chip" data-filtro="verde"><span class="chip-dot"></span>Antimicrobianos</span>
       </div>
     </div>
     <div class="sidebar-list" id="lista-substancias"></div>
@@ -454,7 +495,7 @@
 {
   "_aviso": "Gerado automaticamente a partir da Portaria 344/98. Conferir contra o texto oficial antes de publicar mudanças.",
   "_fonte": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&tipo=POR&numeroAto=00000344&seqAto=000&valorAno=1998&orgao=SVS%2FMS&codTipo=&desItem=&desItemFim=&cod_menu=1696&cod_modulo=134&pesquisa=true",
-  "_capturado_em": "2026-07-28",
+  "_capturado_em": "2026-07-25",
   "listas": {
     "A1": {
       "titulo": "LISTA DAS SUBSTÂNCIAS ENTORPECENTES (Sujeitas à Notificação de Receita \"A\")",
@@ -1937,72 +1978,77 @@
     },
     "diazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "clonazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "alprazolam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "bromazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "lorazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "clordiazepóxido": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "clorazepato": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "flurazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "nitrazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "triazolam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "midazolam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "oxazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "temazepam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "estazolam": {
       "classe": "Ansiolítico/hipnótico benzodiazepínico",
-      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco).",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
+    },
+    "clobazam": {
+      "classe": "Ansiolítico/hipnótico benzodiazepínico",
+      "indicacoes": "Ansiedade, insônia, espasmo muscular, crises convulsivas e sedação pré-procedimento (conforme o fármaco). Clobazam também usado como adjuvante em epilepsias refratárias (ex.: síndrome de Lennox-Gastaut).",
       "mecanismo": "Potencializa a ação do GABA no receptor GABA-A, aumentando a frequência de abertura dos canais de cloreto e a inibição neuronal."
     },
     "zolpidem": {
@@ -2189,6 +2235,866 @@
       "classe": "Precursor hormonal esteroide",
       "indicacoes": "Uso terapêutico restrito, conforme indicação específica.",
       "mecanismo": "Precursor de andrógenos e estrogênios, convertido perifericamente em hormônios sexuais ativos."
+    },
+    "amitriptilina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "amoxapina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "butriptilina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "clomipramina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "desipramina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "dibenzepina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "dimetracrina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "doxepina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "imipramina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "imipraminóxido": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "maprotilina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "mianserina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "nortriptilina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "noxiptilina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "opipramol": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "protriptilina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "trimipramina": {
+      "classe": "Antidepressivo tricíclico/tetracíclico",
+      "indicacoes": "Depressão; alguns também usados em dor neuropática crônica, enxaqueca profilática e enurese noturna.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina nas terminações nervosas; vários têm ação antihistamínica e anticolinérgica associada."
+    },
+    "citalopram": {
+      "classe": "Antidepressivo ISRS (inibidor seletivo da recaptação de serotonina)",
+      "indicacoes": "Depressão, transtornos de ansiedade, transtorno obsessivo-compulsivo e outros transtornos relacionados.",
+      "mecanismo": "Inibe seletivamente a recaptação de serotonina na fenda sináptica, aumentando sua disponibilidade."
+    },
+    "escitalopram": {
+      "classe": "Antidepressivo ISRS (inibidor seletivo da recaptação de serotonina)",
+      "indicacoes": "Depressão, transtornos de ansiedade, transtorno obsessivo-compulsivo e outros transtornos relacionados.",
+      "mecanismo": "Inibe seletivamente a recaptação de serotonina na fenda sináptica, aumentando sua disponibilidade."
+    },
+    "fluoxetina": {
+      "classe": "Antidepressivo ISRS (inibidor seletivo da recaptação de serotonina)",
+      "indicacoes": "Depressão, transtornos de ansiedade, transtorno obsessivo-compulsivo e outros transtornos relacionados.",
+      "mecanismo": "Inibe seletivamente a recaptação de serotonina na fenda sináptica, aumentando sua disponibilidade."
+    },
+    "fluvoxamina": {
+      "classe": "Antidepressivo ISRS (inibidor seletivo da recaptação de serotonina)",
+      "indicacoes": "Depressão, transtornos de ansiedade, transtorno obsessivo-compulsivo e outros transtornos relacionados.",
+      "mecanismo": "Inibe seletivamente a recaptação de serotonina na fenda sináptica, aumentando sua disponibilidade."
+    },
+    "paroxetina": {
+      "classe": "Antidepressivo ISRS (inibidor seletivo da recaptação de serotonina)",
+      "indicacoes": "Depressão, transtornos de ansiedade, transtorno obsessivo-compulsivo e outros transtornos relacionados.",
+      "mecanismo": "Inibe seletivamente a recaptação de serotonina na fenda sináptica, aumentando sua disponibilidade."
+    },
+    "sertralina": {
+      "classe": "Antidepressivo ISRS (inibidor seletivo da recaptação de serotonina)",
+      "indicacoes": "Depressão, transtornos de ansiedade, transtorno obsessivo-compulsivo e outros transtornos relacionados.",
+      "mecanismo": "Inibe seletivamente a recaptação de serotonina na fenda sináptica, aumentando sua disponibilidade."
+    },
+    "desvenlafaxina": {
+      "classe": "Antidepressivo IRSN (inibidor da recaptação de serotonina e noradrenalina)",
+      "indicacoes": "Depressão e transtornos de ansiedade; alguns também usados em dor neuropática e fibromialgia.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina na fenda sináptica."
+    },
+    "duloxetina": {
+      "classe": "Antidepressivo IRSN (inibidor da recaptação de serotonina e noradrenalina)",
+      "indicacoes": "Depressão e transtornos de ansiedade; alguns também usados em dor neuropática e fibromialgia.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina na fenda sináptica."
+    },
+    "levomilnaciprana": {
+      "classe": "Antidepressivo IRSN (inibidor da recaptação de serotonina e noradrenalina)",
+      "indicacoes": "Depressão e transtornos de ansiedade; alguns também usados em dor neuropática e fibromialgia.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina na fenda sináptica."
+    },
+    "milnaciprana": {
+      "classe": "Antidepressivo IRSN (inibidor da recaptação de serotonina e noradrenalina)",
+      "indicacoes": "Depressão e transtornos de ansiedade; alguns também usados em dor neuropática e fibromialgia.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina na fenda sináptica."
+    },
+    "venlafaxina": {
+      "classe": "Antidepressivo IRSN (inibidor da recaptação de serotonina e noradrenalina)",
+      "indicacoes": "Depressão e transtornos de ansiedade; alguns também usados em dor neuropática e fibromialgia.",
+      "mecanismo": "Inibe a recaptação de serotonina e noradrenalina na fenda sináptica."
+    },
+    "fenelzina": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "feniprazina": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "iproclozida": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "isocarboxazida": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "moclobemida": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "nialamida": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "tranilcipromina": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "selegilina": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "rasagilina": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "caroxazona": {
+      "classe": "Antidepressivo/antiparkinsoniano IMAO (inibidor da monoaminoxidase)",
+      "indicacoes": "Depressão resistente a outros tratamentos (IMAOs clássicos); selegilina e rasagilina usadas na doença de Parkinson.",
+      "mecanismo": "Inibe a enzima monoaminoxidase, reduzindo a degradação de serotonina, noradrenalina e dopamina."
+    },
+    "agomelatina": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "bupropiona": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "mirtazapina": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "nefazodona": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "reboxetina": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "tianeptina": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "trazodona": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "vilazodona": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "vortioxetina": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "nomifensina": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "minaprina": {
+      "classe": "Antidepressivo atípico",
+      "indicacoes": "Depressão; alguns também usados como auxiliares no manejo da insônia associada ou na cessação do tabagismo (bupropiona).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (ex.: bupropiona inibe a recaptação de dopamina/noradrenalina; mirtazapina antagoniza receptores alfa-2 e serotoninérgicos; trazodona antagoniza receptores de serotonina)."
+    },
+    "dapoxetina": {
+      "classe": "Inibidor seletivo da recaptação de serotonina (ação curta)",
+      "indicacoes": "Ejaculação precoce.",
+      "mecanismo": "Inibe a recaptação de serotonina de forma rápida e curta, retardando o reflexo ejaculatório."
+    },
+    "atomoxetina": {
+      "classe": "Inibidor seletivo da recaptação de noradrenalina",
+      "indicacoes": "Transtorno de déficit de atenção e hiperatividade (TDAH), como alternativa não estimulante.",
+      "mecanismo": "Inibe seletivamente a recaptação de noradrenalina, sem ação estimulante direta sobre a dopamina."
+    },
+    "clorpromazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "levomepromazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "flufenazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "perfenazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "trifluoperazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "tioridazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "mesoridazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "promazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "proclorperazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "metopromazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "mepazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "periciazina (propericiazina)": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "dixirazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "homofenazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "imicloprazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "butaperazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "tioproperazina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "haloperidol": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "droperidol": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "moperona": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "trifluperidol": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "penfluridol": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "pimozida": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "clorprotixeno": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "tiotixeno": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "zuclopentixol": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "flupentixol": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "clotiapina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "loxapina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "oxipertina": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "sulpirida": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "sultoprida": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "tiaprida": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "amissulprida": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "veraliprida": {
+      "classe": "Antipsicótico típico (fenotiazínico, butirofenona ou tioxanteno)",
+      "indicacoes": "Esquizofrenia e outros transtornos psicóticos; alguns também usados como antieméticos ou sedativos, conforme o fármaco.",
+      "mecanismo": "Antagoniza principalmente os receptores dopaminérgicos D2 no sistema nervoso central."
+    },
+    "aripiprazol": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "asenapina": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "brexpiprazol": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "clozapina": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "lurasidona": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "olanzapina": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "paliperidona": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "quetiapina": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "risperidona": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "ziprasidona": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "zotepina": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "pipamperona": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "pipotiazina": {
+      "classe": "Antipsicótico atípico (de segunda geração)",
+      "indicacoes": "Esquizofrenia, transtorno bipolar e outros transtornos psicóticos, conforme o fármaco.",
+      "mecanismo": "Antagoniza receptores dopaminérgicos D2 e serotoninérgicos 5-HT2A, com perfil de efeitos extrapiramidais geralmente menor que os antipsicóticos típicos."
+    },
+    "ácido valpróico": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "divalproato de sódio": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "valproato sódico": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "beclamida": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "brivaracetam": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "carbamazepina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "cenobamato": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "estiripentol": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "etossuximida": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "fenitoina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "gabapentina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "lacosamida": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "lamotrigina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "levetiracetam": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "oxcarbazepina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "pregabalina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "primidona": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "rufinamida": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "tiagabina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "topiramato": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "vigabatrina": {
+      "classe": "Anticonvulsivante",
+      "indicacoes": "Epilepsia (diversas formas de crise); alguns também usados em dor neuropática (gabapentina, pregabalina) e transtorno bipolar (valproato, carbamazepina, lamotrigina).",
+      "mecanismo": "Mecanismos variados conforme o fármaco (bloqueio de canais de sódio/cálcio voltagem-dependentes ou potencialização do GABA, entre outros), reduzindo a excitabilidade neuronal excessiva."
+    },
+    "buspirona": {
+      "classe": "Ansiolítico não benzodiazepínico (azapirona)",
+      "indicacoes": "Transtorno de ansiedade generalizada.",
+      "mecanismo": "Agonista parcial dos receptores serotoninérgicos 5-HT1A."
+    },
+    "amantadina": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "biperideno": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "entacapona": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "pramipexol": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "ropinirol": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "rotigotina": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "tolcapona": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "pergolida": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "lisurida": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "deutetrabenazina": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "tetrabenazina": {
+      "classe": "Antiparkinsoniano / modulador do sistema dopaminérgico",
+      "indicacoes": "Doença de Parkinson e outros distúrbios do movimento, conforme o fármaco.",
+      "mecanismo": "Mecanismos variados (agonismo dopaminérgico direto, inibição da COMT, ação anticolinérgica, ou depleção de dopamina em tetrabenazina/deutetrabenazina)."
+    },
+    "donepezila": {
+      "classe": "Antidemencial",
+      "indicacoes": "Doença de Alzheimer e outras demências, conforme estágio e fármaco.",
+      "mecanismo": "Inibidores da acetilcolinesterase (donepezila, galantamina, rivastigmina, tacrina) aumentam a disponibilidade de acetilcolina; memantina antagoniza receptores NMDA de glutamato."
+    },
+    "galantamina": {
+      "classe": "Antidemencial",
+      "indicacoes": "Doença de Alzheimer e outras demências, conforme estágio e fármaco.",
+      "mecanismo": "Inibidores da acetilcolinesterase (donepezila, galantamina, rivastigmina, tacrina) aumentam a disponibilidade de acetilcolina; memantina antagoniza receptores NMDA de glutamato."
+    },
+    "rivastigmina": {
+      "classe": "Antidemencial",
+      "indicacoes": "Doença de Alzheimer e outras demências, conforme estágio e fármaco.",
+      "mecanismo": "Inibidores da acetilcolinesterase (donepezila, galantamina, rivastigmina, tacrina) aumentam a disponibilidade de acetilcolina; memantina antagoniza receptores NMDA de glutamato."
+    },
+    "tacrina": {
+      "classe": "Antidemencial",
+      "indicacoes": "Doença de Alzheimer e outras demências, conforme estágio e fármaco.",
+      "mecanismo": "Inibidores da acetilcolinesterase (donepezila, galantamina, rivastigmina, tacrina) aumentam a disponibilidade de acetilcolina; memantina antagoniza receptores NMDA de glutamato."
+    },
+    "memantina": {
+      "classe": "Antidemencial",
+      "indicacoes": "Doença de Alzheimer e outras demências, conforme estágio e fármaco.",
+      "mecanismo": "Inibidores da acetilcolinesterase (donepezila, galantamina, rivastigmina, tacrina) aumentam a disponibilidade de acetilcolina; memantina antagoniza receptores NMDA de glutamato."
+    },
+    "desflurano": {
+      "classe": "Anestésico geral inalatório",
+      "indicacoes": "Indução e/ou manutenção de anestesia geral.",
+      "mecanismo": "Deprime o sistema nervoso central por mecanismos ainda não totalmente elucidados, envolvendo canais iônicos neuronais, induzindo perda de consciência."
+    },
+    "enflurano": {
+      "classe": "Anestésico geral inalatório",
+      "indicacoes": "Indução e/ou manutenção de anestesia geral.",
+      "mecanismo": "Deprime o sistema nervoso central por mecanismos ainda não totalmente elucidados, envolvendo canais iônicos neuronais, induzindo perda de consciência."
+    },
+    "halotano": {
+      "classe": "Anestésico geral inalatório",
+      "indicacoes": "Indução e/ou manutenção de anestesia geral.",
+      "mecanismo": "Deprime o sistema nervoso central por mecanismos ainda não totalmente elucidados, envolvendo canais iônicos neuronais, induzindo perda de consciência."
+    },
+    "isoflurano": {
+      "classe": "Anestésico geral inalatório",
+      "indicacoes": "Indução e/ou manutenção de anestesia geral.",
+      "mecanismo": "Deprime o sistema nervoso central por mecanismos ainda não totalmente elucidados, envolvendo canais iônicos neuronais, induzindo perda de consciência."
+    },
+    "metoxiflurano": {
+      "classe": "Anestésico geral inalatório",
+      "indicacoes": "Indução e/ou manutenção de anestesia geral.",
+      "mecanismo": "Deprime o sistema nervoso central por mecanismos ainda não totalmente elucidados, envolvendo canais iônicos neuronais, induzindo perda de consciência."
+    },
+    "sevoflurano": {
+      "classe": "Anestésico geral inalatório",
+      "indicacoes": "Indução e/ou manutenção de anestesia geral.",
+      "mecanismo": "Deprime o sistema nervoso central por mecanismos ainda não totalmente elucidados, envolvendo canais iônicos neuronais, induzindo perda de consciência."
+    },
+    "etomidato": {
+      "classe": "Anestésico geral / sedativo intravenoso",
+      "indicacoes": "Indução e manutenção de anestesia geral; dexmedetomidina também usada como sedativo em UTI.",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A (maioria) ou age em receptores alfa-2 adrenérgicos (dexmedetomidina), deprimindo o SNC."
+    },
+    "propofol": {
+      "classe": "Anestésico geral / sedativo intravenoso",
+      "indicacoes": "Indução e manutenção de anestesia geral; dexmedetomidina também usada como sedativo em UTI.",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A (maioria) ou age em receptores alfa-2 adrenérgicos (dexmedetomidina), deprimindo o SNC."
+    },
+    "propanidina": {
+      "classe": "Anestésico geral / sedativo intravenoso",
+      "indicacoes": "Indução e manutenção de anestesia geral; dexmedetomidina também usada como sedativo em UTI.",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A (maioria) ou age em receptores alfa-2 adrenérgicos (dexmedetomidina), deprimindo o SNC."
+    },
+    "hidroxidiona": {
+      "classe": "Anestésico geral / sedativo intravenoso",
+      "indicacoes": "Indução e manutenção de anestesia geral; dexmedetomidina também usada como sedativo em UTI.",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A (maioria) ou age em receptores alfa-2 adrenérgicos (dexmedetomidina), deprimindo o SNC."
+    },
+    "dexmedetomidina": {
+      "classe": "Anestésico geral / sedativo intravenoso",
+      "indicacoes": "Indução e manutenção de anestesia geral; dexmedetomidina também usada como sedativo em UTI.",
+      "mecanismo": "Potencializa a ação do GABA no receptor GABA-A (maioria) ou age em receptores alfa-2 adrenérgicos (dexmedetomidina), deprimindo o SNC."
+    },
+    "tetracaína": {
+      "classe": "Anestésico local (uso oftálmico/tópico)",
+      "indicacoes": "Anestesia tópica, especialmente oftálmica.",
+      "mecanismo": "Bloqueia os canais de sódio voltagem-dependentes nos nervos sensoriais, impedindo a condução do impulso doloroso."
+    },
+    "proximetacaina": {
+      "classe": "Anestésico local (uso oftálmico/tópico)",
+      "indicacoes": "Anestesia tópica, especialmente oftálmica.",
+      "mecanismo": "Bloqueia os canais de sódio voltagem-dependentes nos nervos sensoriais, impedindo a condução do impulso doloroso."
+    },
+    "oxibuprocaína (benoxinato)": {
+      "classe": "Anestésico local (uso oftálmico/tópico)",
+      "indicacoes": "Anestesia tópica, especialmente oftálmica.",
+      "mecanismo": "Bloqueia os canais de sódio voltagem-dependentes nos nervos sensoriais, impedindo a condução do impulso doloroso."
+    },
+    "ciclopentolato": {
+      "classe": "Midriático e cicloplégico anticolinérgico",
+      "indicacoes": "Exame oftalmológico (dilatação pupilar) e cicloplegia.",
+      "mecanismo": "Antagoniza os receptores muscarínicos da íris e do músculo ciliar, causando midríase e paralisia da acomodação."
+    },
+    "naloxona": {
+      "classe": "Antagonista opioide",
+      "indicacoes": "Reversão de intoxicação/overdose por opioides (naloxona); manutenção da abstinência (naltrexona); constipação induzida por opioides (metilnaltrexona).",
+      "mecanismo": "Bloqueia competitivamente os receptores opioides (principalmente μ), revertendo os efeitos de agonistas opioides."
+    },
+    "naltrexona": {
+      "classe": "Antagonista opioide",
+      "indicacoes": "Reversão de intoxicação/overdose por opioides (naloxona); manutenção da abstinência (naltrexona); constipação induzida por opioides (metilnaltrexona).",
+      "mecanismo": "Bloqueia competitivamente os receptores opioides (principalmente μ), revertendo os efeitos de agonistas opioides."
+    },
+    "metilnaltrexona": {
+      "classe": "Antagonista opioide",
+      "indicacoes": "Reversão de intoxicação/overdose por opioides (naloxona); manutenção da abstinência (naltrexona); constipação induzida por opioides (metilnaltrexona).",
+      "mecanismo": "Bloqueia competitivamente os receptores opioides (principalmente μ), revertendo os efeitos de agonistas opioides."
+    },
+    "flumazenil": {
+      "classe": "Antagonista benzodiazepínico",
+      "indicacoes": "Reversão da sedação por benzodiazepínicos (intoxicação ou pós-procedimento).",
+      "mecanismo": "Antagoniza competitivamente o receptor GABA-A no sítio benzodiazepínico, revertendo a sedação."
+    },
+    "lítio": {
+      "classe": "Estabilizador de humor",
+      "indicacoes": "Transtorno bipolar (fases maníaca e de manutenção).",
+      "mecanismo": "Mecanismo não totalmente elucidado; envolve modulação de vias de sinalização intracelular no sistema nervoso central."
+    },
+    "celecoxibe": {
+      "classe": "Anti-inflamatório não esteroide (inibidor seletivo da COX-2)",
+      "indicacoes": "Dor e inflamação, especialmente em condições osteoarticulares.",
+      "mecanismo": "Inibe seletivamente a enzima ciclo-oxigenase-2 (COX-2), reduzindo a síntese de prostaglandinas pró-inflamatórias com menor impacto na COX-1 gástrica."
+    },
+    "etoricoxibe": {
+      "classe": "Anti-inflamatório não esteroide (inibidor seletivo da COX-2)",
+      "indicacoes": "Dor e inflamação, especialmente em condições osteoarticulares.",
+      "mecanismo": "Inibe seletivamente a enzima ciclo-oxigenase-2 (COX-2), reduzindo a síntese de prostaglandinas pró-inflamatórias com menor impacto na COX-1 gástrica."
+    },
+    "lumiracoxibe": {
+      "classe": "Anti-inflamatório não esteroide (inibidor seletivo da COX-2)",
+      "indicacoes": "Dor e inflamação, especialmente em condições osteoarticulares.",
+      "mecanismo": "Inibe seletivamente a enzima ciclo-oxigenase-2 (COX-2), reduzindo a síntese de prostaglandinas pró-inflamatórias com menor impacto na COX-1 gástrica."
+    },
+    "parecoxibe": {
+      "classe": "Anti-inflamatório não esteroide (inibidor seletivo da COX-2)",
+      "indicacoes": "Dor e inflamação, especialmente em condições osteoarticulares.",
+      "mecanismo": "Inibe seletivamente a enzima ciclo-oxigenase-2 (COX-2), reduzindo a síntese de prostaglandinas pró-inflamatórias com menor impacto na COX-1 gástrica."
+    },
+    "rofecoxibe": {
+      "classe": "Anti-inflamatório não esteroide (inibidor seletivo da COX-2)",
+      "indicacoes": "Dor e inflamação, especialmente em condições osteoarticulares.",
+      "mecanismo": "Inibe seletivamente a enzima ciclo-oxigenase-2 (COX-2), reduzindo a síntese de prostaglandinas pró-inflamatórias com menor impacto na COX-1 gástrica."
+    },
+    "valdecoxibe": {
+      "classe": "Anti-inflamatório não esteroide (inibidor seletivo da COX-2)",
+      "indicacoes": "Dor e inflamação, especialmente em condições osteoarticulares.",
+      "mecanismo": "Inibe seletivamente a enzima ciclo-oxigenase-2 (COX-2), reduzindo a síntese de prostaglandinas pró-inflamatórias com menor impacto na COX-1 gástrica."
+    },
+    "canabidiol (cbd)": {
+      "classe": "Canabinoide não psicoativo",
+      "indicacoes": "Formas raras e graves de epilepsia refratária (ex.: síndromes de Dravet e Lennox-Gastaut), conforme registro.",
+      "mecanismo": "Ação moduladora sobre o sistema endocanabinoide e outros receptores (ex.: TRPV1, 5-HT1A); mecanismo anticonvulsivante não totalmente elucidado."
+    },
+    "cisaprida": {
+      "classe": "Procinético gastrointestinal",
+      "indicacoes": "Distúrbios da motilidade gastrointestinal (uso restrito por risco cardíaco).",
+      "mecanismo": "Agonista dos receptores serotoninérgicos 5-HT4, aumentando a motilidade do trato gastrointestinal."
+    },
+    "loperamida": {
+      "classe": "Antidiarreico opioide (ação periférica)",
+      "indicacoes": "Diarreia aguda não complicada.",
+      "mecanismo": "Agonista dos receptores opioides μ no trato gastrointestinal, reduzindo a motilidade intestinal, com mínima ação central."
+    },
+    "dissulfiram": {
+      "classe": "Sensibilizador ao álcool (dissuasor)",
+      "indicacoes": "Tratamento adjuvante da dependência alcoólica.",
+      "mecanismo": "Inibe a enzima aldeído desidrogenase, causando acúmulo de acetaldeído e reação desagradável após ingestão de álcool."
+    },
+    "misoprostol": {
+      "classe": "Análogo de prostaglandina E1",
+      "indicacoes": "Prevenção de úlcera péptica associada a AINEs; uso obstétrico conforme protocolo específico.",
+      "mecanismo": "Atua nos receptores de prostaglandina, com ação citoprotetora gástrica e efeito uterotônico."
+    },
+    "molnupiravir": {
+      "classe": "Antiviral",
+      "indicacoes": "Infecções virais específicas, conforme o fármaco (ex.: COVID-19 para molnupiravir; hepatite C e outras viroses para ribavirina).",
+      "mecanismo": "Interfere na replicação viral (molnupiravir induz erros na cópia do RNA viral; ribavirina inibe a síntese de RNA/DNA viral por mecanismos variados)."
+    },
+    "ribavirina": {
+      "classe": "Antiviral",
+      "indicacoes": "Infecções virais específicas, conforme o fármaco (ex.: COVID-19 para molnupiravir; hepatite C e outras viroses para ribavirina).",
+      "mecanismo": "Interfere na replicação viral (molnupiravir induz erros na cópia do RNA viral; ribavirina inibe a síntese de RNA/DNA viral por mecanismos variados)."
+    },
+    "teriflunomida": {
+      "classe": "Imunomodulador (inibidor da síntese de pirimidinas)",
+      "indicacoes": "Esclerose múltipla remitente-recorrente (teriflunomida); artrite reumatoide (leflunomida).",
+      "mecanismo": "Inibe a enzima di-hidro-orotato desidrogenase, reduzindo a proliferação de linfócitos ativados."
+    },
+    "leflunomida": {
+      "classe": "Imunomodulador (inibidor da síntese de pirimidinas)",
+      "indicacoes": "Esclerose múltipla remitente-recorrente (teriflunomida); artrite reumatoide (leflunomida).",
+      "mecanismo": "Inibe a enzima di-hidro-orotato desidrogenase, reduzindo a proliferação de linfócitos ativados."
     }
   },
   "excecoes": {
@@ -6762,10 +7668,22 @@ function normaliza(str){
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
+let categoriasAbertas = {};
+
+function chevronSVG(){
+  return `<svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>`;
+}
+
+function toggleCategoria(codigo){
+  categoriasAbertas[codigo] = !categoriasAbertas[codigo];
+  renderSidebar(document.getElementById('busca').value);
+}
+
 function renderSidebar(filtro=''){
   const lista = document.getElementById('lista-substancias');
   lista.innerHTML = '';
   const termo = normaliza(filtro.trim());
+  const buscando = termo.length > 0;
 
   let algumaEncontrada = false;
 
@@ -6781,7 +7699,7 @@ function renderSidebar(filtro=''){
       algumaEncontrada = true;
       const header = document.createElement('div');
       header.className = 'cat-header marca-header';
-      header.innerHTML = `<span class="cat-dot"></span>Nomes comerciais encontrados`;
+      header.innerHTML = `<span class="cat-nome">🔎 Nomes comerciais encontrados</span><span class="cat-count">${sugestoes.length}</span>`;
       lista.appendChild(header);
 
       sugestoes.forEach(([marca, info]) => {
@@ -6806,19 +7724,33 @@ function renderSidebar(filtro=''){
     if(itensCat.length === 0) return;
     algumaEncontrada = true;
 
-    const header = document.createElement('div');
+    // Durante busca ou filtro ativo, a categoria fica sempre expandida
+    // (senão os resultados ficariam escondidos). Sem busca, respeita o
+    // estado que o usuário escolheu (clique no cabeçalho).
+    const aberta = buscando || filtroTarja !== 'todos' || !!categoriasAbertas[codigo];
+
     const corCat = REGRAS_COR[codigo];
-    header.className = 'cat-header ' + corCat;
-    header.innerHTML = `<span class="cat-dot"></span>${CAT_LABEL[codigo] || codigo}`;
+    const header = document.createElement('button');
+    header.className = 'cat-header ' + corCat + (aberta ? ' aberto' : '');
+    header.innerHTML = `${chevronSVG()}<span class="cat-nome">${CAT_LABEL[codigo] || codigo}</span><span class="cat-count">${itensCat.length}</span>`;
+    header.onclick = () => toggleCategoria(codigo);
     lista.appendChild(header);
 
-    itensCat.forEach(item => {
-      const btn = document.createElement('button');
-      btn.className = 'drug-item ' + item.cor + (substanciaAtual && substanciaAtual.nome === item.nome && substanciaAtual.codigo === item.codigo ? ' active' : '');
-      btn.innerHTML = `<span class="item-dot"></span><span>${item.nome}</span>`;
-      btn.onclick = () => selecionarSubstancia(item);
-      lista.appendChild(btn);
-    });
+    const grupo = document.createElement('div');
+    grupo.className = 'cat-grupo';
+    if(aberta){
+      const itensWrap = document.createElement('div');
+      itensWrap.className = 'cat-grupo-itens';
+      itensCat.forEach(item => {
+        const btn = document.createElement('button');
+        btn.className = 'drug-item ' + item.cor + (substanciaAtual && substanciaAtual.nome === item.nome && substanciaAtual.codigo === item.codigo ? ' active' : '');
+        btn.innerHTML = `<span class="item-dot"></span><span>${item.nome}</span>`;
+        btn.onclick = () => selecionarSubstancia(item);
+        itensWrap.appendChild(btn);
+      });
+      grupo.appendChild(itensWrap);
+    }
+    lista.appendChild(grupo);
   });
 
   if(!algumaEncontrada){
@@ -6852,6 +7784,7 @@ document.getElementById('filtro-tarjas').addEventListener('click', (e) => {
 
 function selecionarSubstancia(item){
   substanciaAtual = item;
+  categoriasAbertas[item.codigo] = true;
   renderSidebar(document.getElementById('busca').value);
   renderConteudo();
 }
